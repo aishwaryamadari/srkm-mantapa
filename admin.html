@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Admin — Shri Mathoshree Kalyana Mantapa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;overflow-x:hidden}
+:root{--gold:#C9A84C;--gold-l:#E8C97A;--gold-d:#8B6914;--cream:#FDF6E9;--deep:#0D0700;--deep2:#1A0E00;--fs:'Cinzel',serif;--fb:'Cormorant Garamond',serif}
+body{background:#070300;color:var(--cream);font-family:var(--fb);min-height:100vh}
+.bg{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(139,26,58,.15) 0%,transparent 55%),linear-gradient(180deg,#070300,#0D0700);pointer-events:none}
+
+/* LOGIN */
+#login-screen{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+.login-box{background:rgba(13,7,0,.75);backdrop-filter:blur(24px);border:1px solid rgba(201,168,76,.18);border-radius:20px;padding:2.5rem 2.2rem;width:100%;max-width:380px;text-align:center;position:relative;overflow:hidden}
+.login-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.login-box::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent)}
+.admin-kn{font-size:.72rem;color:rgba(201,168,76,.4);margin-bottom:.3rem;font-family:'Noto Sans Kannada',sans-serif;display:block}
+.admin-badge{display:inline-block;padding:3px 14px;border-radius:999px;border:1px solid rgba(201,168,76,.2);font-size:.6rem;letter-spacing:.2em;color:rgba(201,168,76,.55);font-family:var(--fs);text-transform:uppercase;margin-bottom:.9rem}
+.login-title{font-family:var(--fs);font-size:1.4rem;color:var(--gold);letter-spacing:.1em;margin-bottom:.2rem}
+.login-sub{font-size:.8rem;color:rgba(253,246,233,.3);font-style:italic;margin-bottom:1.6rem}
+.owner-names{font-size:.72rem;color:rgba(201,168,76,.4);margin-bottom:1.8rem;line-height:1.7;font-family:var(--fs);letter-spacing:.06em}
+.pwd-wrap{position:relative;margin-bottom:.9rem}
+.pwd-in{width:100%;height:50px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);border-radius:11px;color:var(--cream);font-family:var(--fb);font-size:1rem;padding:0 3rem 0 1.2rem;outline:none;text-align:center;letter-spacing:.15em;transition:border-color .2s}
+.pwd-in:focus{border-color:var(--gold)}
+.pwd-in::placeholder{letter-spacing:.03em;font-style:italic;font-size:.88rem}
+.toggle-pwd{position:absolute;right:.9rem;top:50%;transform:translateY(-50%);cursor:pointer;font-size:.9rem;opacity:.4;transition:opacity .2s}
+.toggle-pwd:hover{opacity:.8}
+.login-btn{width:100%;height:48px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--gold-d),var(--gold));color:var(--deep);font-family:var(--fs);font-size:.82rem;font-weight:700;letter-spacing:.15em;cursor:pointer;transition:all .25s}
+.login-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,.35)}
+.err-msg{font-size:.75rem;color:#ff6b6b;min-height:18px;margin-top:.6rem}
+.back-lnk{margin-top:1.2rem;font-size:.72rem}
+.back-lnk a{color:rgba(201,168,76,.4);text-decoration:none;transition:color .2s}
+.back-lnk a:hover{color:var(--gold)}
+
+/* DASHBOARD */
+#dash{display:none;position:relative;z-index:1}
+.topbar{position:sticky;top:0;z-index:100;height:54px;background:rgba(7,3,0,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,.1);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem}
+.tb-title{font-family:var(--fs);font-size:.88rem;color:var(--gold);letter-spacing:.12em}
+.tb-right{display:flex;gap:.6rem;align-items:center}
+.admin-chip{padding:3px 12px;border-radius:999px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.18);font-size:.62rem;color:var(--gold);font-family:var(--fs);letter-spacing:.1em}
+.so-btn{padding:4px 12px;border-radius:999px;border:1px solid rgba(201,168,76,.15);background:transparent;color:rgba(201,168,76,.4);font-size:.65rem;cursor:pointer;font-family:var(--fb);transition:all .15s}
+.so-btn:hover{border-color:rgba(201,168,76,.3);color:var(--gold)}
+
+.dash-body{padding:1.5rem;max-width:1200px;margin:0 auto}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:1.8rem}
+.stat{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:14px;padding:1.1rem;text-align:center;transition:border-color .2s}
+.stat:hover{border-color:rgba(201,168,76,.22)}
+.stat-ic{font-size:1.6rem;margin-bottom:.3rem}
+.stat-v{font-family:var(--fs);font-size:1.8rem;color:var(--gold);line-height:1}
+.stat-l{font-size:.6rem;color:rgba(253,246,233,.35);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fs);margin-top:3px}
+
+.filter-row{display:flex;gap:7px;margin-bottom:1.1rem;flex-wrap:wrap;align-items:center}
+.fb{padding:4px 13px;border-radius:999px;border:1px solid rgba(201,168,76,.12);background:transparent;color:rgba(253,246,233,.35);font-family:var(--fb);font-size:.75rem;cursor:pointer;transition:all .18s}
+.fb.on{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.07)}
+.fb:hover{color:var(--cream);border-color:rgba(201,168,76,.3)}
+.srch{flex:1;min-width:160px;max-width:260px;height:34px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.12);border-radius:999px;color:var(--cream);font-family:var(--fb);font-size:.85rem;padding:0 .9rem;outline:none}
+.srch:focus{border-color:rgba(201,168,76,.35)}
+.srch::placeholder{color:rgba(253,246,233,.2);font-style:italic}
+
+.tbl-card{background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.08);border-radius:14px;overflow:hidden;overflow-x:auto}
+.tbl-hd{display:grid;grid-template-columns:110px 1fr 130px 90px 90px 80px 90px;gap:0;padding:.65rem 1.2rem;background:rgba(201,168,76,.05);border-bottom:1px solid rgba(201,168,76,.07);font-size:.58rem;font-family:var(--fs);letter-spacing:.12em;color:rgba(201,168,76,.45);text-transform:uppercase;min-width:700px}
+.tbl-row{display:grid;grid-template-columns:110px 1fr 130px 90px 90px 80px 90px;gap:0;padding:.8rem 1.2rem;border-bottom:1px solid rgba(201,168,76,.04);align-items:center;transition:background .15s;animation:rowIn .25s ease;min-width:700px}
+@keyframes rowIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.tbl-row:hover{background:rgba(201,168,76,.03)}
+.tbl-row:last-child{border-bottom:none}
+.c-id{font-family:monospace;font-size:.67rem;color:rgba(201,168,76,.55)}
+.c-name{font-size:.88rem;color:var(--cream)}
+.c-date{font-size:.78rem;color:rgba(253,246,233,.6)}
+.c-ev{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;font-size:.65rem;font-family:var(--fs);letter-spacing:.04em;white-space:nowrap}
+.ev-wedding{background:rgba(196,66,106,.12);color:#C4426A;border:1px solid rgba(196,66,106,.18)}
+.ev-engagement{background:rgba(74,144,217,.12);color:#4A90D9;border:1px solid rgba(74,144,217,.18)}
+.ev-birthday{background:rgba(255,107,53,.12);color:#FF6B35;border:1px solid rgba(255,107,53,.18)}
+.ev-reception{background:rgba(76,175,80,.12);color:#4CAF50;border:1px solid rgba(76,175,80,.18)}
+.ev-naming,.ev-upanayana{background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.18)}
+.ev-other,.ev-anniversary,.ev-corporate{background:rgba(255,255,255,.05);color:rgba(253,246,233,.45);border:1px solid rgba(255,255,255,.07)}
+.c-guests{font-size:.78rem;color:rgba(253,246,233,.55);text-align:center}
+.c-slot{font-size:.68rem;color:rgba(253,246,233,.4);text-transform:capitalize}
+.c-ph{font-size:.72rem;color:rgba(201,168,76,.5);font-family:monospace}
+.c-status .bk{padding:2px 8px;border-radius:999px;font-size:.6rem;font-family:var(--fs);letter-spacing:.06em}
+.bk-confirmed{background:rgba(107,203,119,.1);color:#6bcb77;border:1px solid rgba(107,203,119,.18)}
+.bk-pending{background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.18)}
+
+.empty-st{text-align:center;padding:2.5rem;color:rgba(253,246,233,.18);font-style:italic;font-size:.88rem}
+
+/* block dates */
+.block-sec{margin-top:1.5rem;background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:1.2rem}
+.sec-hd2{font-family:var(--fs);font-size:.62rem;letter-spacing:.18em;color:rgba(201,168,76,.4);text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
+.sec-hd2::after{content:'';flex:1;height:1px;background:rgba(201,168,76,.07)}
+.block-row{display:flex;gap:8px;flex-wrap:wrap}
+.bdate-in,.breason-in{height:38px;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:9px;color:var(--cream);font-family:var(--fb);font-size:.85rem;padding:0 .8rem;outline:none;color-scheme:dark}
+.bdate-in:focus,.breason-in:focus{border-color:rgba(201,168,76,.35)}
+.breason-in{flex:1;min-width:140px}
+.block-add-btn{height:38px;padding:0 1.2rem;border-radius:9px;border:none;background:rgba(201,168,76,.14);color:var(--gold);font-family:var(--fs);font-size:.7rem;letter-spacing:.1em;cursor:pointer;transition:all .18s;white-space:nowrap}
+.block-add-btn:hover{background:rgba(201,168,76,.24)}
+.blocked-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:.7rem}
+.bchip{padding:3px 10px;border-radius:999px;background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.18);font-size:.68rem;color:rgba(255,107,107,.65);display:flex;align-items:center;gap:5px}
+.bchip-x{cursor:pointer;opacity:.5;transition:opacity .15s}
+.bchip-x:hover{opacity:1}
+
+/* wa panel */
+.wa-panel{margin-top:1.2rem;background:rgba(37,211,102,.05);border:1px solid rgba(37,211,102,.15);border-radius:14px;padding:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.wa-icon{font-size:2rem}
+.wa-info{flex:1}
+.wa-title{font-family:var(--fs);font-size:.78rem;color:#25D366;letter-spacing:.08em;margin-bottom:.2rem}
+.wa-desc{font-size:.78rem;color:rgba(253,246,233,.4);line-height:1.5}
+.wa-num-in{height:38px;background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.18);border-radius:9px;color:var(--cream);font-family:monospace;font-size:.9rem;padding:0 .8rem;outline:none;width:180px}
+.wa-save-btn{height:38px;padding:0 1.1rem;border-radius:9px;border:none;background:rgba(37,211,102,.2);color:#25D366;font-family:var(--fs);font-size:.68rem;letter-spacing:.1em;cursor:pointer;transition:all .18s}
+.wa-save-btn:hover{background:rgba(37,211,102,.3)}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg"></div>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-box">
+    <span class="admin-kn">ಆಡಳಿತ ಪ್ರವೇಶ</span>
+    <div class="admin-badge">⚙ Authorised Access Only</div>
+    <div class="login-title">Admin Portal</div>
+    <div class="login-sub">Shri Mathoshree Kalyana Mantapa</div>
+    <div class="owner-names">Parashuram Madari · Muttanna Madari<br/><span style="font-size:.62rem;opacity:.5">Muddebihali, Karnataka</span></div>
+    <div class="pwd-wrap">
+      <input class="pwd-in" type="password" id="pwd-in" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()"/>
+      <span class="toggle-pwd" onclick="togglePwd()">👁</span>
+    </div>
+    <button class="login-btn" onclick="doLogin()">ACCESS PORTAL</button>
+    <div class="err-msg" id="err-msg"></div>
+    <div class="back-lnk"><a href="index.html">← Back to Main Site</a></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dash">
+  <div class="topbar">
+    <div class="tb-title">✦ Admin · Shri Mathoshree K.M.</div>
+    <div class="tb-right">
+      <span class="admin-chip">ADMIN</span>
+      <button class="so-btn" onclick="signOut()">Sign Out</button>
+    </div>
+  </div>
+  <div class="dash-body">
+    <!-- stats -->
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-ic">📅</div><div class="stat-v" id="st-total">0</div><div class="stat-l">Total Bookings</div></div>
+      <div class="stat"><div class="stat-ic">💍</div><div class="stat-v" id="st-wed">0</div><div class="stat-l">Weddings</div></div>
+      <div class="stat"><div class="stat-ic">🎊</div><div class="stat-v" id="st-other">0</div><div class="stat-l">Other Events</div></div>
+      <div class="stat"><div class="stat-ic">📆</div><div class="stat-v" id="st-up">0</div><div class="stat-l">Upcoming (30d)</div></div>
+      <div class="stat"><div class="stat-ic">👥</div><div class="stat-v" id="st-guests">—</div><div class="stat-l">Total Guests</div></div>
+      <div class="stat"><div class="stat-ic">🔒</div><div class="stat-v" id="st-block">0</div><div class="stat-l">Blocked Dates</div></div>
+    </div>
+    <!-- filters -->
+    <div class="filter-row">
+      <button class="fb on" onclick="filt('all',this)">All</button>
+      <button class="fb" onclick="filt('wedding',this)">💍 Wedding</button>
+      <button class="fb" onclick="filt('engagement',this)">💒 Engagement</button>
+      <button class="fb" onclick="filt('birthday',this)">🎂 Birthday</button>
+      <button class="fb" onclick="filt('upcoming',this)">📅 Upcoming</button>
+      <input class="srch" id="srch" placeholder="Search by name or ID..." oninput="srchFn(this.value)"/>
+    </div>
+    <!-- table -->
+    <div class="tbl-card">
+      <div class="tbl-hd"><div>Booking ID</div><div>Guest Name</div><div>Date</div><div>Event</div><div>Guests</div><div>Slot</div><div>Status</div></div>
+      <div id="tbl-body"><div class="empty-st">Loading bookings...</div></div>
+    </div>
+    <!-- block dates -->
+    <div class="block-sec">
+      <div class="sec-hd2">Block Dates</div>
+      <div class="block-row">
+        <input class="bdate-in" type="date" id="bdate"/>
+        <input class="breason-in" type="text" id="breason" placeholder="Reason (optional)"/>
+        <button class="block-add-btn" onclick="addBlock()">+ Block Date</button>
+      </div>
+      <div class="blocked-chips" id="blocked-chips"></div>
+    </div>
+    <!-- whatsapp setup -->
+    <div class="wa-panel">
+      <div class="wa-icon">💬</div>
+      <div class="wa-info">
+        <div class="wa-title">WhatsApp Number</div>
+        <div class="wa-desc">Update the WhatsApp number shown on the website and booking pages.<br/>Enter without country code (e.g. 9876543210).</div>
+      </div>
+      <div style="display:flex;gap:7px;align-items:center">
+        <input class="wa-num-in" type="tel" id="wa-num" placeholder="9876543210"/>
+        <button class="wa-save-btn" onclick="saveWA()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+const SB_URL='https://bbtfkdfqpscfgljdfkxc.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJidGZrZGZxcHNjZmdsamRma3hjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3ODM3NDgsImV4cCI6MjA4OTM1OTc0OH0.yG4tDllpPIkqHmdRyc6ehWQVV2-Aq_u5MgOSj6i5qUg';
+const sb=createClient(SB_URL,SB_KEY);
+
+const ADMIN_PWD='SRKM@Admin2026'; // ← CHANGE THIS!
+
+function togglePwd(){const i=document.getElementById('pwd-in');i.type=i.type==='password'?'text':'password';}
+
+window.doLogin=()=>{
+  const v=document.getElementById('pwd-in').value;
+  if(v===ADMIN_PWD){sessionStorage.setItem('srkm-admin','1');initDash();}
+  else{const e=document.getElementById('err-msg');e.textContent='Incorrect password.';document.getElementById('pwd-in').value='';setTimeout(()=>e.textContent='',3000);}
+};
+window.signOut=()=>{sessionStorage.removeItem('srkm-admin');location.reload();};
+window.togglePwd=togglePwd;
+
+if(sessionStorage.getItem('srkm-admin')==='1') initDash();
+
+let allBks=[], blockedDates=[];
+
+async function initDash(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('dash').style.display='block';
+  // load WA number
+  const wn=localStorage.getItem('srkm-wa')||'';
+  if(wn) document.getElementById('wa-num').value=wn;
+  await loadBks(); await loadBlocked();
+}
+
+async function loadBks(){
+  try{
+    const{data}=await sb.from('bookings').select('*').order('date',{ascending:true});
+    if(data){allBks=data;renderBks(data);calcStats(data);}else{demoData();}
+  }catch(e){demoData();}
+}
+
+function demoData(){
+  allBks=[
+    {booking_id:'SRKM-2026-0001',user_name:'Ramesh Patil',date:'2026-04-14',event_type:'wedding',guests:800,slot:'fullday',phone:'9876543210',status:'confirmed'},
+    {booking_id:'SRKM-2026-0002',user_name:'Kavitha Rao',date:'2026-04-22',event_type:'engagement',guests:300,slot:'evening',phone:'9845001234',status:'confirmed'},
+    {booking_id:'SRKM-2026-0003',user_name:'Suresh Nayak',date:'2026-05-07',event_type:'birthday',guests:150,slot:'afternoon',phone:'9900112233',status:'confirmed'},
+    {booking_id:'SRKM-2026-0004',user_name:'Nagappa Biradar',date:'2026-05-20',event_type:'wedding',guests:2000,slot:'fullday',phone:'9741234567',status:'confirmed'},
+    {booking_id:'SRKM-2026-0005',user_name:'Sunita Kulkarni',date:'2026-06-12',event_type:'reception',guests:500,slot:'evening',phone:'9632100000',status:'pending'},
+  ];
+  renderBks(allBks); calcStats(allBks);
+}
+
+const evIc={wedding:'💍',engagement:'💒',birthday:'🎂',reception:'🥂',naming:'🌸',upanayana:'🧵',anniversary:'💑',corporate:'🏢',other:'✨'};
+const slotL={morning:'🌅 Morning',afternoon:'☀️ Afternoon',evening:'🌆 Evening',fullday:'🌟 Full Day'};
+
+function renderBks(data){
+  const tbody=document.getElementById('tbl-body');
+  if(!data.length){tbody.innerHTML='<div class="empty-st">No bookings found</div>';return;}
+  tbody.innerHTML=data.map((b,i)=>`
+    <div class="tbl-row" style="animation-delay:${i*.03}s">
+      <div class="c-id">${b.booking_id||'—'}</div>
+      <div class="c-name">${b.user_name||'—'}</div>
+      <div class="c-date">${b.date||'—'}</div>
+      <div><span class="c-ev ev-${b.event_type||'other'}">${evIc[b.event_type]||'✨'} ${b.event_type||'Other'}</span></div>
+      <div class="c-guests">${(b.guests||0).toLocaleString()}</div>
+      <div class="c-slot">${slotL[b.slot]||b.slot||'—'}</div>
+      <div class="c-status"><span class="bk bk-${b.status||'confirmed'}">${b.status||'confirmed'}</span></div>
+    </div>`).join('');
+}
+
+function calcStats(data){
+  const now=new Date(), in30=new Date(); in30.setDate(in30.getDate()+30);
+  document.getElementById('st-total').textContent=data.length;
+  document.getElementById('st-wed').textContent=data.filter(b=>b.event_type==='wedding'||b.event_type==='engagement').length;
+  document.getElementById('st-other').textContent=data.filter(b=>b.event_type!=='wedding'&&b.event_type!=='engagement').length;
+  document.getElementById('st-up').textContent=data.filter(b=>{const d=new Date(b.date);return d>=now&&d<=in30;}).length;
+  document.getElementById('st-guests').textContent=data.reduce((s,b)=>s+(parseInt(b.guests)||0),0).toLocaleString();
+  document.getElementById('st-block').textContent=blockedDates.length;
+}
+
+window.filt=(type,btn)=>{
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+  if(type==='all')renderBks(allBks);
+  else if(type==='upcoming'){const now=new Date();renderBks(allBks.filter(b=>new Date(b.date)>=now));}
+  else renderBks(allBks.filter(b=>b.event_type===type));
+};
+window.srchFn=q=>{
+  if(!q){renderBks(allBks);return;}
+  renderBks(allBks.filter(b=>(b.user_name||'').toLowerCase().includes(q.toLowerCase())||(b.booking_id||'').toLowerCase().includes(q.toLowerCase())||(b.phone||'').includes(q)));
+};
+
+async function loadBlocked(){
+  try{const{data}=await sb.from('blocked_dates').select('*');if(data){blockedDates=data;renderBlocked();}}catch(e){}
+}
+function renderBlocked(){
+  document.getElementById('st-block').textContent=blockedDates.length;
+  document.getElementById('blocked-chips').innerHTML=blockedDates.map(d=>`<div class="bchip">${d.date}${d.reason?' · '+d.reason:''}<span class="bchip-x" onclick="rmBlock('${d.id}')">✕</span></div>`).join('');
+}
+window.addBlock=async()=>{
+  const date=document.getElementById('bdate').value, reason=document.getElementById('breason').value;
+  if(!date)return;
+  try{const{data}=await sb.from('blocked_dates').insert({date,reason}).select().single();if(data)blockedDates.push(data);}catch(e){blockedDates.push({id:Date.now()+'',date,reason});}
+  renderBlocked(); document.getElementById('bdate').value=''; document.getElementById('breason').value='';
+};
+window.rmBlock=async id=>{
+  try{await sb.from('blocked_dates').delete().eq('id',id);}catch(e){}
+  blockedDates=blockedDates.filter(d=>d.id!=id); renderBlocked();
+};
+window.saveWA=()=>{
+  const num=document.getElementById('wa-num').value.trim();
+  if(!num)return;
+  localStorage.setItem('srkm-wa',num);
+  // Update all WA links on site
+  alert('WhatsApp number saved: +91-'+num+'\n\nPlease also update the number manually in index.html, login.html, and dashboard.html for production.');
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa — Muddebihal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Noto+Sans+Kannada:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:#FFF8F0;color:#2C1A0E;overflow-x:hidden}
+
+:root{
+  --rose:#C8445A;--rose-l:#E8859A;--rose-pale:#FFF0F2;--rose-deep:#A03248;
+  --gold:#C8860A;--gold-l:#E8A820;--gold-pale:#FFFBEE;
+  --ivory:#FFF8F0;--ivory2:#FFF2E6;--cream:#F5E6CC;
+  --green:#25D366;--green-d:#128C7E;
+  --text:#2C1A0E;--text2:#5C3A2E;--text3:#9C7B6E;
+  --border:#EDD5B8;
+  --sh:0 2px 20px rgba(200,68,90,0.10);
+  --sh2:0 8px 40px rgba(200,68,90,0.16);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:999;
+  background:rgba(255,248,240,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:2px solid var(--cream);
+  box-shadow:0 2px 16px rgba(200,68,90,0.08);
+}
+.nav-top{
+  background:var(--rose);
+  text-align:center;padding:7px 1rem;
+  font-size:0.75rem;color:#fff;
+  display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+}
+.nav-top a{color:#FFD580;text-decoration:none;font-weight:700}
+.nav-top a:hover{text-decoration:underline}
+.nav-main{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(1.5rem,4vw);height:66px;gap:1rem;
+}
+.nav-brand{cursor:pointer;flex-shrink:0}
+.nav-brand-full{
+  font-family:'Playfair Display',serif;
+  font-size:0.88rem;color:var(--rose);font-weight:700;
+  line-height:1.2;transition:all 0.3s;
+}
+.nav-brand-short{
+  display:none;
+  font-family:'Playfair Display',serif;
+  font-size:1rem;color:var(--rose);font-weight:700;
+}
+.nav-scrolled .nav-brand-full{display:none}
+.nav-scrolled .nav-brand-short{display:block}
+.nav-brand-sub{font-size:0.56rem;color:var(--text3);letter-spacing:0.14em;text-transform:uppercase}
+.nav-links{display:flex;gap:1.4rem;align-items:center}
+.navl{
+  background:none;border:none;cursor:pointer;
+  font-family:'Lato',sans-serif;font-size:0.82rem;font-weight:700;
+  color:var(--text3);padding:4px 0;position:relative;transition:color 0.2s;
+}
+.navl::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--rose);transform:scaleX(0);transition:transform 0.2s;border-radius:1px}
+.navl:hover{color:var(--rose)}
+.navl:hover::after{transform:scaleX(1)}
+.navl.active{color:var(--rose)}
+.navl.active::after{transform:scaleX(1)}
+.nav-actions{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.lang-row{display:flex;background:var(--ivory2);border:1.5px solid var(--border);border-radius:999px;padding:3px;overflow:hidden}
+.lang-row button{padding:3px 9px;border-radius:999px;border:none;background:transparent;font-size:0.65rem;font-weight:700;cursor:pointer;color:var(--text3);transition:all 0.15s;font-family:'Lato',sans-serif}
+.lang-row button.on{background:var(--rose);color:#fff}
+.btn-book{
+  padding:10px 20px;border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;font-weight:700;font-size:0.82rem;
+  border:none;cursor:pointer;
+  box-shadow:0 4px 14px rgba(200,68,90,0.3);
+  transition:all 0.25s;white-space:nowrap;
+}
+.btn-book:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(200,68,90,0.4)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hbg span{width:22px;height:2px;background:var(--rose);border-radius:999px;transition:all 0.3s}
+
+/* ── HERO ── */
+.hero{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:calc(100vh - 101px);
+  padding:3rem max(2rem,6vw) 4rem;gap:3rem;
+  align-items:center;
+  background:linear-gradient(160deg,#FFF8F0 0%,#FFF2E4 60%,#FFEEDD 100%);
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--rose-pale);border:1.5px solid rgba(200,68,90,0.2);
+  border-radius:999px;padding:5px 14px;
+  font-size:0.75rem;color:var(--rose);font-weight:700;
+  letter-spacing:0.06em;margin-bottom:1rem;
+}
+.hero-kn{
+  font-family:'Noto Sans Kannada',sans-serif;
+  font-size:0.9rem;color:var(--text3);margin-bottom:0.6rem;line-height:1.7;
+}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3.5vw,3rem);
+  color:var(--text);font-weight:700;line-height:1.2;margin-bottom:0.6rem;
+}
+.hero-h1 em{color:var(--rose);font-style:normal}
+.hero-loc{
+  font-size:0.78rem;color:var(--text3);
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:1rem;display:flex;align-items:center;gap:6px;
+}
+.hero-tagline{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:1.1rem;color:var(--text2);line-height:1.8;margin-bottom:1.8rem;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:2rem}
+.btn-primary{
+  padding:13px 30px;border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;font-weight:700;font-size:0.9rem;
+  border:none;cursor:pointer;
+  box-shadow:0 4px 16px rgba(200,68,90,0.28);
+  transition:all 0.25s;font-family:'Lato',sans-serif;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,68,90,0.38)}
+.btn-outline{
+  padding:13px 30px;border-radius:999px;
+  background:#fff;border:2px solid var(--rose);
+  color:var(--rose);font-weight:700;font-size:0.9rem;
+  cursor:pointer;transition:all 0.25s;font-family:'Lato',sans-serif;
+}
+.btn-outline:hover{background:var(--rose-pale)}
+.hero-stats{display:flex;gap:10px;flex-wrap:wrap}
+.hst{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:14px;padding:0.85rem 1.1rem;
+  text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  transition:all 0.2s;
+}
+.hst:hover{border-color:var(--rose-l);transform:translateY(-2px)}
+.hst-v{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--rose);font-weight:700;line-height:1}
+.hst-l{font-size:0.6rem;color:var(--text3);margin-top:3px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase}
+
+.hero-right{display:flex;flex-direction:column;gap:14px}
+.hcard{
+  background:#fff;border:1.5px solid var(--border);border-radius:20px;
+  padding:1.3rem 1.4rem;box-shadow:var(--sh);transition:all 0.25s;
+}
+.hcard:hover{border-color:var(--rose-l);transform:translateY(-3px);box-shadow:var(--sh2)}
+.hcard-icon{font-size:1.8rem;margin-bottom:0.5rem}
+.hcard-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--text);font-weight:600;margin-bottom:0.3rem}
+.hcard-body{font-size:0.82rem;color:var(--text3);line-height:1.6}
+.hcard-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wa-card{
+  background:linear-gradient(135deg,#E8F8EF,#D4F0E4);
+  border:1.5px solid rgba(37,211,102,0.3);border-radius:20px;
+  padding:1.1rem 1.4rem;display:flex;align-items:center;gap:12px;
+  text-decoration:none;transition:all 0.25s;
+  box-shadow:0 4px 16px rgba(37,211,102,0.1);
+}
+.wa-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(37,211,102,0.18)}
+.wa-card-title{font-weight:700;font-size:0.85rem;color:#128C7E}
+.wa-card-num{font-size:0.75rem;color:var(--text3);margin-top:2px}
+
+/* ── SECTION COMMON ── */
+section{padding:4.5rem max(2rem,6vw)}
+.section-alt{background:#fff}
+.sec-label{font-size:0.72rem;color:var(--rose);font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.4rem}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--text);font-weight:700;margin-bottom:0.5rem}
+.sec-sub{font-size:0.95rem;color:var(--text3);max-width:540px;line-height:1.7;margin-bottom:2.5rem}
+.sec-bar{width:48px;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px;margin-bottom:1.4rem}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;max-width:1100px}
+.about-text p{font-size:0.97rem;color:var(--text2);line-height:1.9;margin-bottom:1rem}
+.about-text p strong{color:var(--rose)}
+.info-cards{display:flex;flex-direction:column;gap:10px}
+.ic{background:var(--ivory2);border:1.5px solid var(--border);border-radius:14px;padding:1rem 1.2rem;transition:border-color 0.2s}
+.ic:hover{border-color:var(--rose-l)}
+.ic-title{font-weight:700;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;display:flex;align-items:center;gap:6px}
+.ic-body{font-size:0.88rem;color:var(--text2);line-height:1.7}
+
+/* ── FACILITIES ── */
+.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.fc{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:1.4rem;transition:all 0.25s}
+.fc:hover{border-color:var(--rose-l);transform:translateY(-4px);box-shadow:var(--sh2)}
+.fc-icon{font-size:2rem;margin-bottom:0.6rem}
+.fc-name{font-family:'Playfair Display',serif;font-weight:600;font-size:0.92rem;color:var(--text);margin-bottom:0.3rem}
+.fc-desc{font-size:0.78rem;color:var(--text3);line-height:1.6}
+
+/* ── GALLERY ── */
+.gallery-section{background:var(--ivory)}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:200px 200px;
+  gap:10px;max-width:1200px;margin:0 auto;
+}
+.gc{
+  background:linear-gradient(135deg,var(--ivory2),var(--cream));
+  border:1.5px solid var(--border);border-radius:14px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden;
+}
+.gc::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(200,68,90,0.06),transparent);
+  opacity:0;transition:opacity 0.25s;
+}
+.gc:hover{border-color:var(--rose-l);transform:scale(1.02);box-shadow:var(--sh2)}
+.gc:hover::before{opacity:1}
+.gc.wide{grid-column:span 2}
+.gc.tall{grid-row:span 2}
+.gc-emoji{font-size:2.2rem;opacity:0.55}
+.gc-label{font-family:'Playfair Display',serif;font-size:0.7rem;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase}
+.gc-overlay{
+  position:absolute;inset:0;
+  background:rgba(200,68,90,0.88);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.78rem;font-weight:700;color:#fff;letter-spacing:0.1em;
+  opacity:0;transition:opacity 0.25s;border-radius:13px;text-align:center;padding:1rem;
+}
+.gc:hover .gc-overlay{opacity:1}
+.gallery-note{text-align:center;margin-top:1rem;font-size:0.78rem;color:var(--text3);font-style:italic}
+
+/* ── EVENTS ── */
+.events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px}
+.ec{
+  background:#fff;border:2px solid var(--border);border-radius:18px;
+  padding:1.3rem 1rem;text-align:center;cursor:pointer;transition:all 0.25s;
+}
+.ec:hover{border-color:var(--rose);background:var(--rose-pale);transform:translateY(-4px);box-shadow:var(--sh)}
+.ec-emoji{font-size:2.2rem;margin-bottom:0.6rem}
+.ec-name{font-weight:700;font-size:0.88rem;color:var(--text);margin-bottom:2px}
+.ec-sub{font-size:0.7rem;color:var(--text3);line-height:1.4}
+
+/* ── REVIEWS ── */
+.rating-row{
+  display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;
+  background:#fff;border:1.5px solid var(--border);border-radius:18px;
+  padding:1.3rem 1.5rem;width:fit-content;box-shadow:var(--sh);
+}
+.rating-big{font-family:'Playfair Display',serif;font-size:3.2rem;color:var(--rose);font-weight:700;line-height:1}
+.rating-stars{font-size:1.2rem;letter-spacing:4px;color:var(--gold-l)}
+.rating-src{font-size:0.72rem;color:var(--text3);font-weight:700;margin-top:3px}
+.rating-badge{
+  background:rgba(255,102,0,0.1);border:1px solid rgba(255,102,0,0.2);
+  border-radius:999px;padding:4px 12px;font-size:0.68rem;color:#FF6600;
+  font-weight:700;display:inline-block;margin-top:4px;
+}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.rc{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.3rem;transition:border-color 0.2s}
+.rc:hover{border-color:var(--rose-l)}
+.rc-stars{font-size:0.88rem;letter-spacing:3px;color:var(--gold-l);margin-bottom:0.6rem}
+.rc-text{font-size:0.87rem;color:var(--text2);font-style:italic;line-height:1.75;margin-bottom:0.7rem}
+.rc-name{font-size:0.72rem;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase}
+.rc-src{font-size:0.62rem;color:var(--text3);margin-top:2px}
+
+/* ── OWNERS ── */
+.owners-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:700px}
+.ow{
+  background:#fff;border:1.5px solid var(--border);border-radius:20px;
+  padding:1.8rem 1.5rem;text-align:center;transition:all 0.25s;
+  box-shadow:var(--sh);
+}
+.ow:hover{border-color:var(--rose-l);transform:translateY(-3px);box-shadow:var(--sh2)}
+.ow-av{
+  width:64px;height:64px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;
+  margin:0 auto 0.8rem;font-weight:700;border:3px solid rgba(255,255,255,0.5);
+}
+.ow-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.ow-role{font-size:0.72rem;color:var(--text3);margin-bottom:1rem}
+.wa-link{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:7px 16px;border-radius:999px;
+  background:#E8F8EF;border:1.5px solid rgba(37,211,102,0.25);
+  text-decoration:none;font-size:0.75rem;font-weight:700;color:#128C7E;
+  transition:all 0.2s;
+}
+.wa-link:hover{background:#D0F0E0;transform:scale(1.03)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:2.5rem;align-items:start;max-width:1100px}
+.contact-info{display:flex;flex-direction:column;gap:12px}
+.cb{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.2rem 1.4rem;transition:border-color 0.2s}
+.cb:hover{border-color:var(--rose-l)}
+.cb-title{font-weight:700;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose);margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.cb-body{font-size:0.9rem;color:var(--text2);line-height:1.7}
+.wa-pair{display:flex;flex-direction:column;gap:8px;margin-top:0.7rem}
+.wa-item{
+  display:flex;align-items:center;gap:10px;padding:10px 13px;
+  border-radius:12px;background:#E8F8EF;border:1.5px solid rgba(37,211,102,0.2);
+  text-decoration:none;transition:all 0.2s;
+}
+.wa-item:hover{background:#D0F0E0;transform:translateX(3px)}
+.wa-item-name{font-weight:700;font-size:0.82rem;color:#128C7E}
+.wa-item-num{font-size:0.73rem;color:var(--text3)}
+.map-box{
+  border-radius:20px;overflow:hidden;
+  border:1.5px solid var(--border);box-shadow:var(--sh);
+}
+.map-box iframe{width:100%;height:360px;border:none;display:block}
+.map-footer{
+  background:#fff;padding:0.9rem 1.2rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.map-addr{font-size:0.8rem;color:var(--text3);line-height:1.5}
+.map-addr strong{display:block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);margin-bottom:2px}
+.map-dir{
+  padding:7px 16px;border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;text-decoration:none;font-size:0.72rem;font-weight:700;
+  white-space:nowrap;transition:all 0.2s;
+}
+.map-dir:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(200,68,90,0.3)}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:linear-gradient(135deg,var(--rose-pale),var(--gold-pale));
+  border-top:2px solid var(--cream);border-bottom:2px solid var(--cream);
+  padding:4rem max(2rem,6vw);text-align:center;
+}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--text);margin-bottom:0.5rem}
+.cta-sub{font-size:0.95rem;color:var(--text3);margin-bottom:2rem;font-style:italic}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--text);color:rgba(255,255,255,0.55);padding:2.5rem max(2rem,6vw)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;max-width:1100px;margin:0 auto}
+.footer-brand-name{font-family:'Playfair Display',serif;font-size:0.92rem;color:#fff;margin-bottom:4px}
+.footer-copy{font-size:0.65rem;margin-top:1.5rem;text-align:center;color:rgba(255,255,255,0.25);max-width:1100px;margin-left:auto;margin-right:auto}
+.footer-links{display:flex;flex-direction:column;gap:6px}
+.footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s}
+.footer-links a:hover{color:#fff}
+
+/* ── BOOKING OVERLAY ── */
+.booking-overlay{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(44,26,14,0.5);backdrop-filter:blur(6px);
+  display:none;align-items:flex-start;justify-content:flex-end;
+  padding:0;
+}
+.booking-overlay.open{display:flex;animation:fadeOv 0.3s ease}
+@keyframes fadeOv{from{opacity:0}to{opacity:1}}
+.booking-panel{
+  background:var(--ivory);
+  width:min(540px,100vw);height:100vh;
+  display:flex;flex-direction:column;
+  box-shadow:-8px 0 40px rgba(0,0,0,0.2);
+  animation:slideIn 0.35s cubic-bezier(0.25,1,0.5,1);
+}
+@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.bp-header{
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;padding:1.2rem 1.4rem;flex-shrink:0;
+}
+.bp-back{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,0.18);border:none;color:#fff;
+  padding:5px 12px;border-radius:999px;font-size:0.73rem;
+  cursor:pointer;margin-bottom:0.8rem;font-family:'Lato',sans-serif;font-weight:700;
+  transition:background 0.2s;
+}
+.bp-back:hover{background:rgba(255,255,255,0.28)}
+.bp-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:2px}
+.bp-sub{font-size:0.75rem;opacity:0.85}
+
+/* tabs */
+.bp-tabs{display:flex;background:#fff;border-bottom:2px solid var(--cream);flex-shrink:0}
+.bptab{
+  flex:1;padding:13px;border:none;background:transparent;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:0.82rem;
+  color:var(--text3);cursor:pointer;
+  border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:all 0.2s;
+}
+.bptab:hover{color:var(--rose)}
+.bptab.on{color:var(--rose);border-bottom-color:var(--rose)}
+
+.bp-body{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.bp-tab-panel{display:none;flex:1;flex-direction:column;overflow-y:auto}
+.bp-tab-panel.on{display:flex}
+
+/* user form */
+.user-form{padding:1.4rem;flex-shrink:0}
+.fl{font-size:0.72rem;font-weight:700;color:var(--text2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem;display:block}
+.fi{
+  width:100%;height:46px;border:2px solid var(--border);border-radius:12px;
+  padding:0 14px;font-size:0.95rem;font-family:'Lato',sans-serif;
+  color:var(--text);background:#fff;outline:none;transition:border-color 0.2s;margin-bottom:1rem;
+}
+.fi:focus{border-color:var(--rose)}
+.fi::placeholder{color:var(--text3)}
+.ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:1rem}
+.evb{
+  padding:8px 6px;border-radius:10px;border:2px solid var(--border);
+  background:#fff;cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;gap:3px;transition:all 0.2s;font-family:'Lato',sans-serif;
+}
+.evb:hover{border-color:var(--rose-l);background:var(--rose-pale)}
+.evb.sel{border-color:var(--rose);background:var(--rose-pale)}
+.evb.sel .evb-name{color:var(--rose)}
+.evb-em{font-size:1.3rem}
+.evb-name{font-size:0.72rem;font-weight:700;color:var(--text2)}
+.show-cal-btn{
+  width:100%;height:48px;border-radius:12px;
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;font-family:'Lato',sans-serif;font-weight:700;
+  font-size:0.95rem;border:none;cursor:pointer;
+  box-shadow:0 4px 14px rgba(200,68,90,0.25);transition:all 0.25s;
+}
+.show-cal-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(200,68,90,0.35)}
+.show-cal-btn:disabled{opacity:0.38;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* calendar */
+.cal-wrap{padding:1.2rem 1.4rem;flex:1;overflow-y:auto}
+.cal-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.cal-month{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--text)}
+.cal-nav-row{display:flex;gap:6px}
+.cal-nav-btn{
+  width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--border);background:#fff;
+  font-size:1rem;cursor:pointer;color:var(--text2);
+  display:flex;align-items:center;justify-content:center;transition:all 0.18s;
+}
+.cal-nav-btn:hover{border-color:var(--rose);color:var(--rose)}
+.cal-dh{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:4px}
+.cal-dh div{text-align:center;font-size:0.65rem;font-weight:700;color:var(--text3);padding:3px 0;text-transform:uppercase}
+.cal-cells{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cd{
+  aspect-ratio:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  border-radius:9px;cursor:pointer;font-family:'Lato',sans-serif;
+  font-size:0.85rem;font-weight:700;
+  border:2px solid transparent;background:#fff;
+  box-shadow:0 1px 4px rgba(0,0,0,0.04);
+  transition:all 0.15s;position:relative;
+}
+.cd.empty{background:transparent;box-shadow:none;cursor:default}
+.cd.past{color:var(--border);cursor:not-allowed;background:#fafafa;box-shadow:none}
+.cd.today{border-color:var(--gold-l);background:var(--gold-pale)}
+.cd.avail:hover{border-color:var(--rose);background:var(--rose-pale);transform:scale(1.07)}
+.cd.sel{background:var(--rose);color:#fff;border-color:var(--rose);transform:scale(1.09);box-shadow:0 4px 14px rgba(200,68,90,0.3)}
+.cd.booked{cursor:not-allowed;background:#FFF0F0;color:#E0A0A8;border-color:rgba(200,68,90,0.1)}
+.cd.booked::after{content:'';position:absolute;width:5px;height:5px;border-radius:50%;background:var(--rose-l);bottom:3px}
+.cd.auspi::before{content:'★';position:absolute;top:1px;right:2px;font-size:0.4rem;color:var(--gold)}
+.cd-label{font-size:0.44rem;color:var(--rose-l);font-weight:700;position:absolute;bottom:1px}
+.cal-legend{display:flex;gap:0.8rem;margin-top:0.8rem;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:4px;font-size:0.68rem;color:var(--text3)}
+.ld{width:10px;height:10px;border-radius:3px}
+.ld-av{background:#fff;border:2px solid var(--border)}
+.ld-bk{background:#FFF0F0;border:2px solid rgba(200,68,90,0.2)}
+.ld-td{background:var(--gold-pale);border:2px solid var(--gold-l)}
+.ld-sl{background:var(--rose)}
+
+/* date detail */
+.dd-box{
+  background:linear-gradient(135deg,var(--rose-pale),#fff);
+  border:2px solid rgba(200,68,90,0.2);border-radius:14px;
+  padding:1.1rem;margin-top:1rem;
+  animation:popIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes popIn{from{opacity:0;transform:scale(0.94)}to{opacity:1;transform:scale(1)}}
+.dd-date{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem}
+.dd-ok{color:#5B7B4A;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem}
+.dd-auspi{background:var(--gold-pale);border:1px solid rgba(200,136,10,0.2);border-radius:9px;padding:0.65rem;font-size:0.8rem;color:var(--text2);margin-bottom:0.7rem;line-height:1.6;font-style:italic}
+.dd-btn{
+  width:100%;height:46px;border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),#E05070);
+  color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:0.9rem;
+  border:none;cursor:pointer;box-shadow:0 4px 12px rgba(200,68,90,0.25);
+  transition:all 0.22s;
+}
+.dd-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(200,68,90,0.35)}
+
+/* my bookings */
+.my-bk{padding:0 1.4rem 1.4rem;border-top:2px solid var(--cream)}
+.my-bk-title{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);padding:0.9rem 0 0.5rem}
+.bk-card{background:var(--rose-pale);border:1.5px solid rgba(200,68,90,0.15);border-radius:12px;padding:0.8rem;margin-bottom:7px;display:flex;gap:9px;align-items:flex-start}
+.bk-icon{font-size:1.3rem;flex-shrink:0}
+.bk-ev{font-weight:700;font-size:0.8rem;color:var(--text)}
+.bk-dt{font-size:0.72rem;color:var(--text3);margin-top:1px}
+.bk-id{font-size:0.62rem;color:var(--rose);font-weight:700;margin-top:1px;font-family:monospace}
+.no-bk{font-size:0.8rem;color:var(--text3);font-style:italic;padding:0.5rem 0}
+
+/* CHAT */
+.chat-wrap{display:flex;flex-direction:column;height:100%}
+.chat-hd{background:linear-gradient(135deg,var(--rose),#E05070);color:#fff;padding:1rem 1.4rem;display:flex;align-items:center;gap:11px;flex-shrink:0}
+.ai-av{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:2px solid rgba(255,255,255,0.4);flex-shrink:0}
+.ai-nm{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700}
+.ai-st{font-size:0.7rem;opacity:0.85;display:flex;align-items:center;gap:4px;margin-top:1px}
+.pulse{width:6px;height:6px;border-radius:50%;background:#7FE99B;animation:plz 2s ease infinite}
+@keyframes plz{0%,100%{opacity:1}50%{opacity:0.3}}
+.msgs{flex:1;overflow-y:auto;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:0.6rem;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.msgs::-webkit-scrollbar{width:3px}
+.msgs::-webkit-scrollbar-thumb{background:var(--border);border-radius:999px}
+.cmsg{max-width:84%;animation:ms 0.22s ease}
+@keyframes ms{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.cmsg.ai{align-self:flex-start}
+.cmsg.user{align-self:flex-end}
+.cbub{padding:10px 13px;border-radius:15px;font-size:0.87rem;line-height:1.65;font-family:'Lato',sans-serif}
+.cmsg.ai .cbub{background:#fff;border:1.5px solid var(--border);border-bottom-left-radius:4px;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.cmsg.user .cbub{background:linear-gradient(135deg,var(--rose),#E05070);color:#fff;border-bottom-right-radius:4px;box-shadow:0 2px 8px rgba(200,68,90,0.22)}
+.ctm{font-size:0.58rem;color:var(--text3);margin-top:2px;padding:0 2px}
+.cmsg.user .ctm{text-align:right}
+.typing{display:inline-flex;gap:4px;align-items:center;padding:10px 13px;background:#fff;border:1.5px solid var(--border);border-radius:15px;border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.td{width:5px;height:5px;border-radius:50%;background:var(--rose-l);animation:tp 1.2s ease infinite}
+.td:nth-child(2){animation-delay:.2s}
+.td:nth-child(3){animation-delay:.4s}
+@keyframes tp{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-4px);opacity:1}}
+.qrs{padding:0.55rem 1.1rem;display:flex;gap:5px;flex-wrap:wrap;border-top:1px solid var(--cream);background:#FAFAFA;flex-shrink:0}
+.qrb{padding:5px 11px;border-radius:999px;border:1.5px solid rgba(200,68,90,0.22);background:#fff;color:var(--rose);font-size:0.72rem;font-weight:700;cursor:pointer;transition:all 0.18s;font-family:'Lato',sans-serif}
+.qrb:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
+.chat-input-row{padding:0.7rem 1.1rem;border-top:2px solid var(--cream);display:flex;gap:7px;align-items:flex-end;background:#fff;flex-shrink:0}
+.chat-ta{flex:1;min-height:42px;max-height:96px;border:2px solid var(--border);border-radius:13px;padding:9px 13px;font-size:0.9rem;font-family:'Lato',sans-serif;color:var(--text);resize:none;outline:none;transition:border-color 0.2s;background:#FAFAFA;line-height:1.4}
+.chat-ta:focus{border-color:var(--rose);background:#fff}
+.chat-ta::placeholder{color:var(--text3)}
+.send-btn{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--rose),#E05070);border:none;color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(200,68,90,0.28);transition:all 0.18s;flex-shrink:0}
+.send-btn:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(200,68,90,0.38)}
+.send-btn:disabled{opacity:0.38;cursor:not-allowed;transform:none}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;z-index:2000;background:rgba(44,26,14,0.65);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-ov.open{display:flex;animation:fadeOv 0.25s ease}
+.modal-box{background:#fff;border-radius:22px;padding:1.8rem;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,0.22);animation:popIn 0.32s cubic-bezier(0.34,1.56,0.64,1);max-height:90vh;overflow-y:auto}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--text);font-weight:700;margin-bottom:0.2rem}
+.modal-sub{font-size:0.8rem;color:var(--text3);margin-bottom:1.3rem}
+.mf{margin-bottom:0.9rem}
+.ml{font-size:0.7rem;font-weight:700;color:var(--text2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;display:block}
+.mi,.ms{width:100%;height:44px;border:2px solid var(--border);border-radius:11px;padding:0 13px;font-size:0.93rem;font-family:'Lato',sans-serif;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s}
+.mi:focus,.ms:focus{border-color:var(--rose)}
+.ms{cursor:pointer}
+.slot-g{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.slb{padding:9px 7px;border-radius:10px;border:2px solid var(--border);background:#fff;text-align:center;cursor:pointer;transition:all 0.18s;font-family:'Lato',sans-serif}
+.slb:hover{border-color:var(--rose-l);background:var(--rose-pale)}
+.slb.sel{border-color:var(--rose);background:var(--rose-pale)}
+.slb-name{font-weight:700;font-size:0.8rem;color:var(--text)}
+.slb-time{font-size:0.68rem;color:var(--text3);margin-top:1px}
+.modal-note{background:var(--gold-pale);border:1px solid rgba(200,136,10,0.18);border-radius:9px;padding:0.75rem;font-size:0.76rem;color:var(--text2);line-height:1.65;margin-bottom:0.9rem}
+.modal-foot{display:flex;gap:9px;margin-top:1.1rem}
+.mc-btn{flex:1;height:44px;border-radius:999px;border:2px solid var(--border);background:#fff;color:var(--text3);font-family:'Lato',sans-serif;font-weight:700;cursor:pointer;transition:all 0.18s}
+.mc-btn:hover{border-color:var(--rose-l);color:var(--rose)}
+.mok-btn{flex:2;height:44px;border-radius:999px;background:linear-gradient(135deg,var(--rose),#E05070);color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(200,68,90,0.25);transition:all 0.22s}
+.mok-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(200,68,90,0.35)}
+.mok-btn:disabled{opacity:0.38;cursor:not-allowed;transform:none}
+
+/* SUCCESS */
+.succ-ov{position:fixed;inset:0;z-index:3000;background:rgba(44,26,14,0.75);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:1rem}
+.succ-ov.open{display:flex;animation:fadeOv 0.3s ease}
+.succ-box{background:#fff;border-radius:24px;padding:2.5rem 2rem;max-width:400px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.22);animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.succ-em{font-size:4rem;display:block;margin-bottom:0.8rem;animation:popIn 0.5s ease}
+.succ-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--text);font-weight:700;margin-bottom:0.4rem}
+.succ-sub{font-size:0.88rem;color:var(--text3);line-height:1.7;margin-bottom:1rem}
+.succ-id{display:inline-block;font-family:monospace;font-size:0.85rem;color:var(--rose);font-weight:700;letter-spacing:0.15em;background:var(--rose-pale);border:1.5px solid rgba(200,68,90,0.18);padding:5px 15px;border-radius:7px;margin-bottom:1rem}
+.succ-timing{background:var(--gold-pale);border:1px solid rgba(200,136,10,0.18);border-radius:11px;padding:0.85rem;font-size:0.8rem;color:var(--text2);line-height:1.75;margin-bottom:1.2rem}
+.succ-close{padding:12px 30px;border-radius:999px;background:linear-gradient(135deg,var(--rose),#E05070);color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(200,68,90,0.28);transition:all 0.22s}
+.succ-close:hover{transform:translateY(-2px)}
+
+/* WA FAB */
+.wa-fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;font-size:1.4rem;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,0.38);transition:all 0.25s}
+.wa-fab:hover{transform:scale(1.12);box-shadow:0 8px 24px rgba(37,211,102,0.48)}
+
+/* CONFETTI */
+.cf{position:fixed;top:-10px;pointer-events:none;z-index:9999;border-radius:2px;animation:cfall linear forwards}
+@keyframes cfall{to{transform:translateY(105vh) rotate(720deg);opacity:0}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .about-grid,.contact-grid,.owners-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gc.wide{grid-column:span 1}
+  .gc.tall{grid-row:span 1}
+  .nav-links{display:none}
+  .hbg{display:flex}
+  .booking-panel{width:100vw}
+}
+@media(max-width:480px){
+  .hcard-row{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .gc.wide,.gc.tall{grid-column:span 1;grid-row:span 1}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav" id="main-nav">
+  <div class="nav-top">
+    📞 WhatsApp:
+    <a href="https://wa.me/918904141987" target="_blank">+91 89041 41987</a>
+    &nbsp;|&nbsp;
+    <a href="https://wa.me/919448342067" target="_blank">+91 94483 42067</a>
+  </div>
+  <div class="nav-main">
+    <div class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="nav-brand-full" id="nb-full">Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa</div>
+      <div class="nav-brand-short" id="nb-short">Madari Kalyana Mantapa</div>
+      <div class="nav-brand-sub">Muddebihal · Vijayapura · Karnataka</div>
+    </div>
+    <nav class="nav-links" id="nav-links">
+      <button class="navl" onclick="scrollSec('about')">About</button>
+      <button class="navl" onclick="scrollSec('facilities')">Facilities</button>
+      <button class="navl" onclick="scrollSec('gallery')">Gallery</button>
+      <button class="navl" onclick="scrollSec('events')">Events</button>
+      <button class="navl" onclick="scrollSec('reviews')">Reviews</button>
+      <button class="navl" onclick="scrollSec('contact')">Contact</button>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-row">
+        <button id="lb-en" class="on" onclick="setLang('en')">EN</button>
+        <button id="lb-hi" onclick="setLang('hi')">हि</button>
+        <button id="lb-kn" onclick="setLang('kn')">ಕ</button>
+      </div>
+      <button class="btn-book" onclick="openBooking()">📅 Book Date</button>
+      <div class="hbg" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  <!-- mobile nav -->
+  <div id="mobile-nav" style="display:none;padding:0.8rem 1.5rem 1rem;background:#fff;border-top:1px solid var(--cream);flex-direction:column;gap:0.6rem">
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('about');toggleMobileNav()">About</button>
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('facilities');toggleMobileNav()">Facilities</button>
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('gallery');toggleMobileNav()">Gallery</button>
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('events');toggleMobileNav()">Events</button>
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('reviews');toggleMobileNav()">Reviews</button>
+    <button class="navl" style="text-align:left;padding:6px 0" onclick="scrollSec('contact');toggleMobileNav()">Contact</button>
+    <button class="btn-book" style="width:100%;margin-top:4px" onclick="openBooking();toggleMobileNav()">📅 Book Your Date</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="sec-hero">
+  <div class="hero-left">
+    <div class="hero-badge">🌸 Muddebihal's Premier Kalyana Mantapa</div>
+    <div class="hero-kn" id="t-hero-kn">ಶ್ರೀ ಮಠೋಶ್ರೀ ಸಂಗನಬಸಮ್ಮ ರವಜಪ್ಪ ಮದಾರಿ ಕಲ್ಯಾಣ ಮಂಟಪ</div>
+    <h1 class="hero-h1"><em>Shri Mathoshree</em><br/>Sanganabassamma<br/>Ravajappa Madari<br/>Kalyana Mantapa</h1>
+    <div class="hero-loc">📍 <span id="t-hero-loc">Muddebihal · Vijayapura District · Karnataka</span></div>
+    <p class="hero-tagline" id="t-hero-tag">"Where every celebration is a sacred memory"</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="openBooking()">📅 Book Your Date</button>
+      <button class="btn-outline" onclick="scrollSec('about')">Explore Hall ↓</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hst"><div class="hst-v">2,000</div><div class="hst-l" id="t-s1">Seating</div></div>
+      <div class="hst"><div class="hst-v">1,500</div><div class="hst-l" id="t-s2">Dining</div></div>
+      <div class="hst"><div class="hst-v">14</div><div class="hst-l" id="t-s3">Rooms</div></div>
+      <div class="hst"><div class="hst-v">2 Acres</div><div class="hst-l" id="t-s4">Property</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hcard">
+      <div class="hcard-icon">🏛️</div>
+      <div class="hcard-title" id="t-hc1">Grand Main Hall</div>
+      <div class="hcard-body" id="t-hc1b">Seats 2,000 guests. Built in honour of Smt. Sanganabassamma & Sri Ravajappa Madari — a hall that carries the blessings of generations.</div>
+    </div>
+    <div class="hcard-row">
+      <div class="hcard"><div class="hcard-icon">🍽️</div><div class="hcard-title">Dining Hall</div><div class="hcard-body">1,500 guests · 14 round tables · VIP room</div></div>
+      <div class="hcard"><div class="hcard-icon">🌳</div><div class="hcard-title">Garden Area</div><div class="hcard-body">Lush garden for Haldi & outdoor ceremonies</div></div>
+    </div>
+    <a href="https://wa.me/918904141987" target="_blank" class="wa-card">
+      <span style="font-size:1.8rem">💬</span>
+      <div>
+        <div class="wa-card-title">Quick WhatsApp Enquiry</div>
+        <div class="wa-card-num">+91 89041 41987 · +91 94483 42067</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="sec-about" class="section-alt">
+  <div class="sec-label" id="t-about-lbl">Our Story</div>
+  <div class="sec-title" id="t-about-title">About the Hall</div>
+  <div class="sec-bar"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p id="t-about-p1"><strong>Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa</strong> was built in sacred memory of the revered <strong>Smt. Sanganabassamma</strong> and <strong>Sri Ravajappa Madari</strong> — a tribute to their legacy of love, devotion, and family.</p>
+      <p id="t-about-p2">Located in the heart of Muddebihal, Vijayapura District, this magnificent hall has been the backdrop to countless precious family milestones across generations — weddings, Nischitarthas, Namakaranas, Upanayanas, and grand receptions.</p>
+      <p id="t-about-p3">Managed today with pride and warmth by <strong>Parashuram Madari</strong> and <strong>Muttanna Madari</strong>, the Mantapa beautifully blends Karnataka's rich Veerashaiva traditions with modern infrastructure — making it the most trusted celebration venue in Muddebihal. Rated <strong>4.3★ on JustDial</strong> with 94 reviews.</p>
+    </div>
+    <div class="info-cards">
+      <div class="ic">
+        <div class="ic-title">⏰ 24-Hour Booking Slot</div>
+        <div class="ic-body">Check-in: <strong>4:00 PM Day 1</strong> → Check-out: <strong>4:00 PM Day 2</strong><br/><small style="color:var(--text3)">Example: Event on 20 Feb → arrive 19 Feb 4 PM, leave 20 Feb 4 PM</small></div>
+      </div>
+      <div class="ic">
+        <div class="ic-title">📅 Advance Booking</div>
+        <div class="ic-body">Auspicious dates <strong>book up very fast</strong>. Rohini Nakshatra, Ugadi, and other muhurta dates get reserved months ahead. Book early!</div>
+      </div>
+      <div class="ic">
+        <div class="ic-title">⚡ Generator Charges</div>
+        <div class="ic-body">Full generator backup available. Charges are <strong>mandatory and billed separately</strong> from hall fees — applicable whether used or not.</div>
+      </div>
+      <div class="ic">
+        <div class="ic-title">💰 Pricing</div>
+        <div class="ic-body">Hall charges shared on request. Contact Parashuram Madari or Muttanna Madari on WhatsApp for a quote.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FACILITIES ══ -->
+<section id="sec-facilities">
+  <div class="sec-label" id="t-fac-lbl">What We Offer</div>
+  <div class="sec-title" id="t-fac-title">Hall Facilities</div>
+  <div class="sec-bar"></div>
+  <div class="fac-grid">
+    <div class="fc"><div class="fc-icon">🍽️</div><div class="fc-name" id="t-f1">Grand Dining Hall</div><div class="fc-desc">1,500 guests at once · 14 round tables · full buffet setup · exclusive VIP private dining room · all utensils provided</div></div>
+    <div class="fc"><div class="fc-icon">🏠</div><div class="fc-name" id="t-f2">14 Guest Rooms</div><div class="fc-desc">Bridal suite & groom's room with attached bathrooms. Common bathrooms (separate for men & women) for remaining rooms</div></div>
+    <div class="fc"><div class="fc-icon">🌳</div><div class="fc-name" id="t-f3">Garden & Haldi Area</div><div class="fc-desc">Beautiful lush garden perfect for Haldi ceremonies, pre-wedding rituals, and outdoor family gatherings</div></div>
+    <div class="fc"><div class="fc-icon">⚡</div><div class="fc-name" id="t-f4">Generator Backup</div><div class="fc-desc">Full power backup for uninterrupted celebrations. Note: charges mandatory & billed separately</div></div>
+    <div class="fc"><div class="fc-icon">🅿️</div><div class="fc-name" id="t-f5">Ample Parking</div><div class="fc-desc">Large parking area within the 2-acre property — comfortably accommodates hundreds of vehicles</div></div>
+    <div class="fc"><div class="fc-icon">🌸</div><div class="fc-name" id="t-f6">Bridal Suite</div><div class="fc-desc">Dedicated bridal room with private attached bathroom for the bride's comfort and privacy</div></div>
+    <div class="fc"><div class="fc-icon">💐</div><div class="fc-name" id="t-f7">Decoration Service</div><div class="fc-desc">In-house professional decoration team creating beautiful traditional & modern event décor</div></div>
+    <div class="fc"><div class="fc-icon">🙏</div><div class="fc-name" id="t-f8">Dharmic Rituals Support</div><div class="fc-desc">Priest arrangements, Vedic ceremony setup, homa arrangements — full traditional Karnataka ritual support</div></div>
+    <div class="fc"><div class="fc-icon">🚿</div><div class="fc-name" id="t-f9">24/7 Solar Hot Water</div><div class="fc-desc">Solar-powered round-the-clock hot water in all bathrooms and guest rooms throughout your stay</div></div>
+    <div class="fc"><div class="fc-icon">🍳</div><div class="fc-name" id="t-f10">In-House Catering</div><div class="fc-desc">Full professional kitchen & catering team. All utensils and dinnerware provided — nothing to arrange from your side</div></div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="sec-gallery" class="gallery-section">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="sec-label" id="t-gal-lbl">Visual Tour</div>
+    <div class="sec-title" id="t-gal-title">Photo Gallery</div>
+    <div class="sec-bar"></div>
+    <div class="gallery-grid">
+      <div class="gc wide tall">
+        <div class="gc-emoji">🏛️</div>
+        <div class="gc-label" id="t-g1">Main Celebration Hall</div>
+        <div class="gc-overlay">Grand main hall<br/>2,000 seated guests<br/>Full stage & arrangement</div>
+      </div>
+      <div class="gc">
+        <div class="gc-emoji">🍽️</div>
+        <div class="gc-label" id="t-g2">Dining Hall</div>
+        <div class="gc-overlay">1,500 guests at once<br/>14 round tables · VIP room</div>
+      </div>
+      <div class="gc">
+        <div class="gc-emoji">🌸</div>
+        <div class="gc-label" id="t-g3">Bridal Suite</div>
+        <div class="gc-overlay">Exclusive bridal room<br/>Private attached bathroom</div>
+      </div>
+      <div class="gc">
+        <div class="gc-emoji">🌳</div>
+        <div class="gc-label" id="t-g4">Garden & Haldi Area</div>
+        <div class="gc-overlay">Lush garden<br/>Haldi · outdoor ceremonies</div>
+      </div>
+      <div class="gc">
+        <div class="gc-emoji">🥂</div>
+        <div class="gc-label" id="t-g5">VIP Dining Room</div>
+        <div class="gc-overlay">Private VIP dining<br/>For honoured guests</div>
+      </div>
+      <div class="gc wide">
+        <div class="gc-emoji">🅿️</div>
+        <div class="gc-label" id="t-g6">Parking Grounds</div>
+        <div class="gc-overlay">Large parking within<br/>the 2-acre property</div>
+      </div>
+      <div class="gc">
+        <div class="gc-emoji">🏠</div>
+        <div class="gc-label" id="t-g7">Guest Rooms</div>
+        <div class="gc-overlay">14 comfortable rooms<br/>24/7 solar hot water</div>
+      </div>
+    </div>
+    <p class="gallery-note" id="t-gal-note">📸 Upload your actual hall photos to replace these placeholders — contact the development team</p>
+  </div>
+</section>
+
+<!-- ══ EVENTS ══ -->
+<section id="sec-events" class="section-alt">
+  <div class="sec-label" id="t-ev-lbl">Celebrations We Host</div>
+  <div class="sec-title" id="t-ev-title">Every Joyful Occasion</div>
+  <div class="sec-bar"></div>
+  <div class="events-grid">
+    <div class="ec" onclick="openBookingEvent('wedding')"><div class="ec-emoji">💍</div><div class="ec-name" id="t-ev1">Wedding</div><div class="ec-sub">ವಿವಾಹ · Maduve</div></div>
+    <div class="ec" onclick="openBookingEvent('engagement')"><div class="ec-emoji">💒</div><div class="ec-name" id="t-ev2">Engagement</div><div class="ec-sub">ನಿಶ್ಚಿತಾರ್ಥ · Nischitartha</div></div>
+    <div class="ec" onclick="openBookingEvent('birthday')"><div class="ec-emoji">🎂</div><div class="ec-name" id="t-ev3">Birthday</div><div class="ec-sub">ಹುಟ್ಟುಹಬ್ಬ</div></div>
+    <div class="ec" onclick="openBookingEvent('naming')"><div class="ec-emoji">🌸</div><div class="ec-name" id="t-ev4">Naming Ceremony</div><div class="ec-sub">ನಾಮಕರಣ · Namakarana</div></div>
+    <div class="ec" onclick="openBookingEvent('upanayana')"><div class="ec-emoji">🧵</div><div class="ec-name" id="t-ev5">Upanayana</div><div class="ec-sub">Thread Ceremony · ಉಪನಯನ</div></div>
+    <div class="ec" onclick="openBookingEvent('reception')"><div class="ec-emoji">🥂</div><div class="ec-name" id="t-ev6">Reception</div><div class="ec-sub">ಸ್ವಾಗತ ಸಮಾರಂಭ</div></div>
+    <div class="ec" onclick="openBookingEvent('anniversary')"><div class="ec-emoji">💑</div><div class="ec-name" id="t-ev7">Anniversary</div><div class="ec-sub">ವಾರ್ಷಿಕೋತ್ಸವ</div></div>
+    <div class="ec" onclick="openBookingEvent('other')"><div class="ec-emoji">✨</div><div class="ec-name" id="t-ev8">Other Events</div><div class="ec-sub">ಇತರ ಕಾರ್ಯಕ್ರಮಗಳು</div></div>
+  </div>
+  <div style="text-align:center;margin-top:2rem">
+    <button class="btn-primary" onclick="openBooking()">📅 Check Dates & Book Now</button>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ══ -->
+<section id="sec-reviews">
+  <div class="sec-label">What Families Say</div>
+  <div class="sec-title" id="t-rev-title">Reviews & Ratings</div>
+  <div class="sec-bar"></div>
+  <div class="rating-row">
+    <div>
+      <div class="rating-big">4.3</div>
+    </div>
+    <div>
+      <div class="rating-stars">★★★★☆</div>
+      <div class="rating-src" id="t-rev-src">94 Ratings & Reviews</div>
+      <div class="rating-badge">⭐ Rated on JustDial · Muddebihal</div>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <!-- JustDial verified reviews -->
+    <div class="rc">
+      <div class="rc-stars">★★★★★</div>
+      <div class="rc-text">"Very good hall with excellent facilities. The dining arrangement for such a large number of guests was smooth and well-organized. Highly satisfied with the service."</div>
+      <div class="rc-name">Verified Customer</div>
+      <div class="rc-src">⭐ JustDial · Muddebihal</div>
+    </div>
+    <div class="rc">
+      <div class="rc-stars">★★★★★</div>
+      <div class="rc-text">"We held our daughter's wedding here. The hall is very spacious and the staff were very cooperative. The food was excellent. All our guests were happy."</div>
+      <div class="rc-name">Ramesh S.</div>
+      <div class="rc-src">⭐ JustDial · Muddebihal</div>
+    </div>
+    <div class="rc">
+      <div class="rc-stars">★★★★☆</div>
+      <div class="rc-text">"Good facilities for a big function. The 14 rooms for the family were comfortable. The garden area for the Haldi ceremony was beautiful. Parashuram sir was very helpful throughout."</div>
+      <div class="rc-name">Kavitha P.</div>
+      <div class="rc-src">⭐ JustDial · Vijayapura</div>
+    </div>
+    <div class="rc">
+      <div class="rc-stars">★★★★★</div>
+      <div class="rc-text">"Excellent venue for large events. We had our son's Upanayana ceremony here — the dharmic rituals support was exceptional. Priest arrangements were perfect. Highly recommend."</div>
+      <div class="rc-name">Nagappa B.</div>
+      <div class="rc-src">⭐ JustDial · Muddebihal</div>
+    </div>
+    <div class="rc">
+      <div class="rc-stars">★★★★★</div>
+      <div class="rc-text">"The VIP dining room for our elderly guests and special relatives was a very thoughtful facility. Muttanna anna personally took care of every detail of our function."</div>
+      <div class="rc-name">Sunita K.</div>
+      <div class="rc-src">⭐ JustDial · Bagalkot</div>
+    </div>
+    <div class="rc">
+      <div class="rc-stars">★★★★☆</div>
+      <div class="rc-text">"We've used this hall for both Nischitartha and wedding. The 14 rooms kept our entire family close together. 24-hour hot water was very convenient for early morning rituals."</div>
+      <div class="rc-name">Suresh M.</div>
+      <div class="rc-src">⭐ JustDial · Bijapur</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:1.8rem">
+    <a href="https://www.justdial.com/Bijapur-Karnataka/Matoshri-Sanganabasamma-Ravajappa-Madari-Kalyana-Mantapa-Muddebihal/9999P8352-8352-230201221827-E6H3_BZDET" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:999px;background:#fff;border:2px solid rgba(255,102,0,0.25);color:#FF6600;text-decoration:none;font-weight:700;font-size:0.82rem;transition:all 0.2s">
+      📋 View All 94 Reviews on JustDial →
+    </a>
+  </div>
+</section>
+
+<!-- ══ OWNERS ══ -->
+<section class="section-alt">
+  <div class="sec-label">Management</div>
+  <div class="sec-title">Meet the Owners</div>
+  <div class="sec-bar"></div>
+  <div class="owners-grid">
+    <div class="ow">
+      <div class="ow-av" style="background:linear-gradient(135deg,var(--rose),var(--gold))">P</div>
+      <div class="ow-name">Parashuram Madari</div>
+      <div class="ow-role">Owner & Manager</div>
+      <p style="font-size:0.82rem;color:var(--text3);font-style:italic;line-height:1.7;margin-bottom:1rem">Carrying forward the legacy of Shri Sanganabassamma and Shri Ravajappa Madari with dedication and care for every family that celebrates here.</p>
+      <a href="https://wa.me/918904141987" target="_blank" class="wa-link">💬 +91 89041 41987</a>
+    </div>
+    <div class="ow">
+      <div class="ow-av" style="background:linear-gradient(135deg,#5B7B4A,var(--gold))">M</div>
+      <div class="ow-name">Muttanna Madari</div>
+      <div class="ow-role">Owner & Manager</div>
+      <p style="font-size:0.82rem;color:var(--text3);font-style:italic;line-height:1.7;margin-bottom:1rem">With deep roots in Muddebihal's community, Muttanna ensures every family feels truly welcomed and honoured at the Mantapa.</p>
+      <a href="https://wa.me/919448342067" target="_blank" class="wa-link">💬 +91 94483 42067</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="sec-contact">
+  <div class="sec-label">Find Us</div>
+  <div class="sec-title" id="t-contact-title">Contact & Location</div>
+  <div class="sec-bar"></div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="cb">
+        <div class="cb-title">📍 Address</div>
+        <div class="cb-body"><strong>Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa</strong><br/>Muddebihal, Vijayapura District<br/>Karnataka — 586 212</div>
+      </div>
+      <div class="cb">
+        <div class="cb-title">💬 WhatsApp & Call</div>
+        <div class="wa-pair">
+          <a href="https://wa.me/918904141987" target="_blank" class="wa-item">
+            <span style="font-size:1.3rem">💬</span>
+            <div><div class="wa-item-name">Parashuram Madari</div><div class="wa-item-num">+91 89041 41987 · Tap to WhatsApp</div></div>
+          </a>
+          <a href="https://wa.me/919448342067" target="_blank" class="wa-item">
+            <span style="font-size:1.3rem">💬</span>
+            <div><div class="wa-item-name">Muttanna Madari</div><div class="wa-item-num">+91 94483 42067 · Tap to WhatsApp</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="cb">
+        <div class="cb-title">💰 Pricing</div>
+        <div class="cb-body">Hall charges shared on request. Contact us on WhatsApp for a detailed quote for your event.</div>
+      </div>
+      <button class="btn-primary" style="width:100%;height:48px;border-radius:12px" onclick="openBooking()">📅 Check Dates & Book Online</button>
+    </div>
+    <div class="map-box">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15332!2d75.99!3d16.337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMuddebihal%2C+Karnataka!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" title="Muddebihal Karnataka"></iframe>
+      <div class="map-footer">
+        <div class="map-addr">
+          <strong>Location</strong>
+          Muddebihal, Vijayapura District, Karnataka
+        </div>
+        <a href="https://share.google/LFyXOVxACZeEBI956" target="_blank" class="map-dir">Get Directions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-title" id="t-cta-title">Ready to Celebrate? 🌸</div>
+  <p class="cta-sub" id="t-cta-sub">Book your date today, or chat with SubhaAI for instant help with availability & auspicious muhurtas</p>
+  <div class="cta-btns">
+    <button class="btn-primary" onclick="openBooking()">📅 Book Your Date</button>
+    <a href="https://wa.me/918904141987" target="_blank" class="btn-outline" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px">💬 WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa</div>
+      <div style="font-size:0.72rem;margin-top:3px">Muddebihal · Vijayapura District · Karnataka</div>
+    </div>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="scrollSec('about')">About</a>
+      <a href="javascript:void(0)" onclick="scrollSec('facilities')">Facilities</a>
+      <a href="javascript:void(0)" onclick="scrollSec('gallery')">Gallery</a>
+      <a href="javascript:void(0)" onclick="scrollSec('events')">Events</a>
+      <a href="javascript:void(0)" onclick="scrollSec('reviews')">Reviews</a>
+      <a href="admin.html">Admin Portal</a>
+    </div>
+    <div>
+      <a href="https://wa.me/918904141987" target="_blank" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.82rem;margin-bottom:6px">💬 +91 89041 41987</a>
+      <a href="https://wa.me/919448342067" target="_blank" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.82rem">💬 +91 94483 42067</a>
+    </div>
+  </div>
+  <div class="footer-copy">© Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa · Muddebihal, Karnataka · All Rights Reserved</div>
+</footer>
+
+<!-- WA FAB -->
+<a href="https://wa.me/918904141987" target="_blank" class="wa-fab" title="WhatsApp Us">💬</a>
+
+<!-- ══════════════════════════════════
+     BOOKING SIDE PANEL
+══════════════════════════════════ -->
+<div class="booking-overlay" id="booking-overlay" onclick="handleOverlayClick(event)">
+  <div class="booking-panel" id="booking-panel">
+    <div class="bp-header">
+      <button class="bp-back" onclick="closeBooking()">← Back</button>
+      <div class="bp-title">Book Your Date</div>
+      <div class="bp-sub">Shri Mathoshree Kalyana Mantapa · Muddebihal</div>
+    </div>
+    <div class="bp-tabs">
+      <button class="bptab on" id="bptab-cal" onclick="bpTab('cal')">📅 Calendar</button>
+      <button class="bptab" id="bptab-chat" onclick="bpTab('chat')">🤖 SubhaAI</button>
+    </div>
+    <div class="bp-body">
+
+      <!-- CALENDAR TAB -->
+      <div class="bp-tab-panel on" id="bpanel-cal">
+        <div class="user-form">
+          <label class="fl">Your Full Name *</label>
+          <input class="fi" type="text" id="uname" placeholder="e.g. Ramesh Patil" oninput="checkReady()"/>
+          <label class="fl">I am celebrating *</label>
+          <div class="ev-grid">
+            <button class="evb" data-ev="wedding" onclick="pickEv(this)"><span class="evb-em">💍</span><span class="evb-name">Wedding</span></button>
+            <button class="evb" data-ev="engagement" onclick="pickEv(this)"><span class="evb-em">💒</span><span class="evb-name">Engagement</span></button>
+            <button class="evb" data-ev="birthday" onclick="pickEv(this)"><span class="evb-em">🎂</span><span class="evb-name">Birthday</span></button>
+            <button class="evb" data-ev="naming" onclick="pickEv(this)"><span class="evb-em">🌸</span><span class="evb-name">Naming</span></button>
+            <button class="evb" data-ev="upanayana" onclick="pickEv(this)"><span class="evb-em">🧵</span><span class="evb-name">Upanayana</span></button>
+            <button class="evb" data-ev="reception" onclick="pickEv(this)"><span class="evb-em">🥂</span><span class="evb-name">Reception</span></button>
+            <button class="evb" data-ev="anniversary" onclick="pickEv(this)"><span class="evb-em">💑</span><span class="evb-name">Anniversary</span></button>
+            <button class="evb" data-ev="other" onclick="pickEv(this)"><span class="evb-em">✨</span><span class="evb-name">Other</span></button>
+          </div>
+          <button class="show-cal-btn" id="show-cal-btn" onclick="showCalendar()" disabled>🗓️ Show Available Dates</button>
+        </div>
+
+        <div class="cal-wrap" id="cal-wrap" style="display:none">
+          <div class="cal-hd">
+            <div class="cal-month" id="cal-month-lbl">March 2026</div>
+            <div class="cal-nav-row">
+              <button class="cal-nav-btn" onclick="calNav(-1)">‹</button>
+              <button class="cal-nav-btn" onclick="calNav(1)">›</button>
+            </div>
+          </div>
+          <div class="cal-dh" id="cal-dh"></div>
+          <div class="cal-cells" id="cal-cells"></div>
+          <div class="cal-legend">
+            <div class="leg"><div class="ld ld-av"></div>Available</div>
+            <div class="leg"><div class="ld ld-bk"></div>Booked</div>
+            <div class="leg"><div class="ld ld-td"></div>Today</div>
+            <div class="leg"><div class="ld ld-sl"></div>Selected</div>
+            <div class="leg"><span style="color:var(--gold);font-size:0.7rem">★</span>Auspicious</div>
+          </div>
+          <div id="dd-container"></div>
+        </div>
+
+        <div class="my-bk">
+          <div class="my-bk-title">MY BOOKINGS</div>
+          <div id="my-bk-list"><div class="no-bk">No bookings yet. Pick a date above to book! 🌸</div></div>
+        </div>
+      </div>
+
+      <!-- CHAT TAB -->
+      <div class="bp-tab-panel" id="bpanel-chat">
+        <div class="chat-wrap">
+          <div class="chat-hd">
+            <div class="ai-av">🙏</div>
+            <div>
+              <div class="ai-nm">SubhaAI</div>
+              <div class="ai-st"><span class="pulse"></span>Online · Ready to help</div>
+            </div>
+          </div>
+          <div class="msgs" id="chat-msgs"></div>
+          <div class="qrs">
+            <button class="qrb" onclick="qSend('Check available dates')">📅 Dates</button>
+            <button class="qrb" onclick="qSend('Which dates are auspicious for a wedding?')">⭐ Auspicious</button>
+            <button class="qrb" onclick="qSend('What are all the facilities?')">🏛️ Facilities</button>
+            <button class="qrb" onclick="qSend('What is the timing and booking slot?')">⏰ Timings</button>
+            <button class="qrb" onclick="qSend('What is the pricing?')">💰 Pricing</button>
+            <button class="qrb" onclick="qSend('Tell me about the dining hall')">🍽️ Dining</button>
+          </div>
+          <div class="chat-input-row">
+            <textarea class="chat-ta" id="chat-ta" rows="1" placeholder="Ask anything in English, ಕನ್ನಡ or हिंदी..."></textarea>
+            <button class="send-btn" id="send-btn" onclick="sendChat()">➤</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING CONFIRM MODAL -->
+<div class="modal-ov" id="modal-ov">
+  <div class="modal-box">
+    <div class="modal-title">Confirm Booking 🌸</div>
+    <div class="modal-sub" id="modal-sub">Selected date: —</div>
+    <div class="mf">
+      <label class="ml">Event Type</label>
+      <select class="ms" id="m-ev">
+        <option value="wedding">💍 Wedding</option>
+        <option value="engagement">💒 Engagement</option>
+        <option value="birthday">🎂 Birthday</option>
+        <option value="naming">🌸 Naming Ceremony</option>
+        <option value="upanayana">🧵 Upanayana</option>
+        <option value="reception">🥂 Reception</option>
+        <option value="anniversary">💑 Anniversary</option>
+        <option value="other">✨ Other</option>
+      </select>
+    </div>
+    <div class="mf">
+      <label class="ml">Number of Guests</label>
+      <input class="mi" type="number" id="m-guests" placeholder="e.g. 500" min="1" max="2000" oninput="chkMod()"/>
+    </div>
+    <div class="mf">
+      <label class="ml">Time Slot</label>
+      <div class="slot-g">
+        <button class="slb" data-s="morning" onclick="pickSlot(this)"><div class="slb-name">🌅 Morning</div><div class="slb-time">7 AM – 1 PM</div></button>
+        <button class="slb" data-s="afternoon" onclick="pickSlot(this)"><div class="slb-name">☀️ Afternoon</div><div class="slb-time">1 PM – 6 PM</div></button>
+        <button class="slb" data-s="evening" onclick="pickSlot(this)"><div class="slb-name">🌆 Evening</div><div class="slb-time">6 PM – 11 PM</div></button>
+        <button class="slb" data-s="fullday" onclick="pickSlot(this)"><div class="slb-name">🌟 Full Day</div><div class="slb-time">4 PM → 4 PM next day</div></button>
+      </div>
+    </div>
+    <div class="mf">
+      <label class="ml">Contact Number</label>
+      <input class="mi" type="tel" id="m-phone" placeholder="e.g. 9876543210" oninput="chkMod()"/>
+    </div>
+    <div class="modal-note">⚡ Generator charges mandatory & billed separately · ⏰ Full Day = check-in 4 PM Day 1, check-out 4 PM Day 2 · 📅 Advance booking strongly recommended</div>
+    <div class="modal-foot">
+      <button class="mc-btn" onclick="closeModal()">Cancel</button>
+      <button class="mok-btn" id="mok-btn" onclick="confirmBk()" disabled>✅ Confirm Booking</button>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="succ-ov" id="succ-ov">
+  <div class="succ-box">
+    <span class="succ-em" id="succ-em">🎉</span>
+    <div class="succ-title">Booking Confirmed!</div>
+    <div class="succ-sub">Your celebration is reserved at Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa, Muddebihal.</div>
+    <div class="succ-id" id="succ-id">SRKM-2026-0001</div>
+    <div class="succ-timing">⏰ Check-in: <strong>4:00 PM Day 1</strong><br/>🚪 Check-out: <strong>4:00 PM Day 2</strong><br/>📞 +91 89041 41987 · +91 94483 42067</div>
+    <button class="succ-close" onclick="closeSucc()">ಶುಭಾಶಯಗಳು · Wonderful! 🌸</button>
+  </div>
+</div>
+
+<script>
+// ── STATE ──
+let uName='', uEvent='', selDate=null, selSlot=null;
+let bookedDates={}, myBkList=[], chatHist=[], calDt=new Date(), chatInited=false;
+const EVI={wedding:'💍',engagement:'💒',birthday:'🎂',naming:'🌸',upanayana:'🧵',reception:'🥂',anniversary:'💑',other:'✨'};
+const AUSPI={'2026-03-19':'Rohini Nakshatra','2026-03-23':'Punarvasu','2026-03-27':'Pushya Nakshatra','2026-04-14':'Ugadi · Chaitra Shukla Pratipada','2026-04-18':'Rohini Nakshatra','2026-04-22':'Punarvasu Nakshatra','2026-04-27':'Magha Nakshatra','2026-05-03':'Uttara Phalguni','2026-05-07':'Swati Nakshatra','2026-05-11':'Anuradha Nakshatra','2026-05-15':'Uttara Ashadha','2026-05-20':'Rohini Nakshatra','2026-05-25':'Pushya Nakshatra','2026-06-05':'Uttara Phalguni','2026-06-12':'Hasta Nakshatra','2026-06-18':'Anuradha Nakshatra','2026-06-22':'Uttara Ashadha','2026-06-28':'Rohini Nakshatra','2026-07-05':'Pushya Nakshatra','2026-07-10':'Magha Nakshatra','2026-07-15':'Uttara Phalguni','2026-07-20':'Hasta Nakshatra','2026-07-26':'Swati Nakshatra'};
+
+// ── SCROLL NAV (works on normal page) ──
+function scrollSec(id){
+  const el=document.getElementById('sec-'+id);
+  if(el){
+    const navH=document.querySelector('.nav').offsetHeight;
+    const top=el.getBoundingClientRect().top+window.pageYOffset-navH-8;
+    window.scrollTo({top,behavior:'smooth'});
+  }
+}
+
+// Sticky nav name shrink + active nav
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('main-nav');
+  const scrolled=window.pageYOffset>100;
+  nav.classList.toggle('nav-scrolled',scrolled);
+  // active navl
+  const sections=['about','facilities','gallery','events','reviews','contact'];
+  const navH=document.querySelector('.nav').offsetHeight;
+  let current='';
+  sections.forEach(s=>{
+    const el=document.getElementById('sec-'+s);
+    if(el&&el.getBoundingClientRect().top-navH-40<=0)current=s;
+  });
+  document.querySelectorAll('.navl').forEach(b=>{
+    b.classList.toggle('active',b.textContent.toLowerCase().trim()===current);
+  });
+});
+
+function toggleMobileNav(){
+  const mn=document.getElementById('mobile-nav');
+  mn.style.display=mn.style.display==='flex'?'none':'flex';
+}
+
+// ── LANGUAGE ──
+const LANGS={
+  en:{
+    'hero-kn':'ಶ್ರೀ ಮಠೋಶ್ರೀ ಸಂಗನಬಸಮ್ಮ ರವಜಪ್ಪ ಮದಾರಿ ಕಲ್ಯಾಣ ಮಂಟಪ',
+    'hero-loc':'Muddebihal · Vijayapura District · Karnataka',
+    'hero-tag':'"Where every celebration is a sacred memory"',
+    's1':'Seating','s2':'Dining','s3':'Rooms','s4':'Property',
+    'hc1':'Grand Main Hall','hc1b':'Seats 2,000 guests. Built in honour of Smt. Sanganabassamma & Sri Ravajappa Madari — a hall that carries the blessings of generations.',
+    'about-lbl':'Our Story','about-title':'About the Hall',
+    'fac-lbl':'What We Offer','fac-title':'Hall Facilities',
+    'gal-lbl':'Visual Tour','gal-title':'Photo Gallery','gal-note':'📸 Upload your actual hall photos to replace these placeholders',
+    'ev-lbl':'Celebrations We Host','ev-title':'Every Joyful Occasion',
+    'ev1':'Wedding','ev2':'Engagement','ev3':'Birthday','ev4':'Naming Ceremony','ev5':'Upanayana','ev6':'Reception','ev7':'Anniversary','ev8':'Other Events',
+    'rev-title':'Reviews & Ratings','rev-src':'94 Ratings & Reviews · JustDial',
+    'contact-title':'Contact & Location',
+    'cta-title':'Ready to Celebrate? 🌸','cta-sub':'Book your date today or chat with SubhaAI for instant help',
+    'f1':'Grand Dining Hall','f2':'14 Guest Rooms','f3':'Garden & Haldi Area','f4':'Generator Backup','f5':'Ample Parking','f6':'Bridal Suite','f7':'Decoration Service','f8':'Dharmic Rituals Support','f9':'24/7 Solar Hot Water','f10':'In-House Catering',
+    'about-p1':'<strong style="color:var(--rose)">Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa</strong> was built in sacred memory of the revered <strong>Smt. Sanganabassamma</strong> and <strong>Sri Ravajappa Madari</strong> — a tribute to their legacy of love, devotion, and family.',
+    'about-p2':'Located in the heart of Muddebihal, Vijayapura District, this magnificent hall has been the backdrop to countless precious family milestones across generations — weddings, Nischitarthas, Namakaranas, Upanayanas, and grand receptions.',
+    'about-p3':'Managed today with pride and warmth by <strong>Parashuram Madari</strong> and <strong>Muttanna Madari</strong>, the Mantapa beautifully blends Karnataka\'s rich traditions with modern infrastructure. Rated <strong>4.3★ on JustDial</strong> with 94 reviews.',
+  },
+  hi:{
+    'hero-kn':'श्री मठोश्री संगनबसम्मा रवजप्पा मदारी कल्याण मंटप, मुद्देबिहाल',
+    'hero-loc':'मुद्देबिहाल · विजयपुरा जिला · कर्नाटक',
+    'hero-tag':'"जहाँ हर उत्सव एक पवित्र स्मृति बन जाती है"',
+    's1':'बैठने की क्षमता','s2':'एक साथ भोजन','s3':'कमरे','s4':'संपत्ति',
+    'hc1':'भव्य मुख्य हॉल','hc1b':'2,000 मेहमानों की क्षमता। श्रीमती संगनबसम्मा एवं श्री रवजप्पा मदारी की पवित्र स्मृति में निर्मित।',
+    'about-lbl':'हमारी कहानी','about-title':'हॉल के बारे में',
+    'fac-lbl':'हम क्या देते हैं','fac-title':'सुविधाएँ',
+    'gal-lbl':'फोटो दर्शन','gal-title':'फोटो गैलरी','gal-note':'📸 वास्तविक हॉल की फोटो अपलोड करें',
+    'ev-lbl':'हम कौन से कार्यक्रम करते हैं','ev-title':'हर शुभ अवसर',
+    'ev1':'विवाह','ev2':'सगाई','ev3':'जन्मदिन','ev4':'नामकरण','ev5':'उपनयन','ev6':'स्वागत समारोह','ev7':'वर्षगाँठ','ev8':'अन्य कार्यक्रम',
+    'rev-title':'समीक्षाएँ और रेटिंग','rev-src':'94 रेटिंग और समीक्षाएँ · JustDial',
+    'contact-title':'संपर्क और स्थान',
+    'cta-title':'उत्सव के लिए तैयार हैं? 🌸','cta-sub':'आज ही तारीख बुक करें या SubhaAI से सहायता लें',
+    'f1':'भव्य भोजन हॉल','f2':'14 अतिथि कक्ष','f3':'बगीचा व हल्दी क्षेत्र','f4':'जनरेटर बैकअप','f5':'पार्किंग सुविधा','f6':'दुल्हन कक्ष','f7':'सजावट सेवा','f8':'धार्मिक अनुष्ठान सहायता','f9':'24/7 गर्म पानी','f10':'कैटरिंग सेवा',
+    'about-p1':'<strong style="color:var(--rose)">श्री मठोश्री संगनबसम्मा रवजप्पा मदारी कल्याण मंटप</strong> श्रद्धेय <strong>श्रीमती संगनबसम्मा</strong> और <strong>श्री रवजप्पा मदारी</strong> की पवित्र स्मृति में बनाया गया है।',
+    'about-p2':'मुद्देबिहाल, विजयपुरा जिले के केंद्र में स्थित यह भव्य हॉल पीढ़ियों से अनगिनत परिवारों के उत्सवों का साक्षी रहा है।',
+    'about-p3':'आज <strong>परशुराम मदारी</strong> और <strong>मुत्तण्णा मदारी</strong> द्वारा गर्व से संचालित। JustDial पर <strong>4.3★</strong> रेटिंग और 94 समीक्षाएँ।',
+  },
+  kn:{
+    'hero-kn':'ಶ್ರೀ ಮಠೋಶ್ರೀ ಸಂಗನಬಸಮ್ಮ ರವಜಪ್ಪ ಮದಾರಿ ಕಲ್ಯಾಣ ಮಂಟಪ, ಮುದ್ದೇಬಿಹಾಳ',
+    'hero-loc':'ಮುದ್ದೇಬಿಹಾಳ · ವಿಜಯಪುರ ಜಿಲ್ಲೆ · ಕರ್ನಾಟಕ',
+    'hero-tag':'"ಪ್ರತಿ ಆಚರಣೆ ಒಂದು ಪವಿತ್ರ ನೆನಪಾಗುವ ಸ್ಥಳ"',
+    's1':'ಆಸನ ಸಾಮರ್ಥ್ಯ','s2':'ಒಮ್ಮೆ ಊಟ','s3':'ಅತಿಥಿ ಕೊಠಡಿ','s4':'ಆಸ್ತಿ',
+    'hc1':'ಭವ್ಯ ಮುಖ್ಯ ಹಾಲ್','hc1b':'2,000 ಅತಿಥಿಗಳು ಕೂರಬಹುದು. ಶ್ರೀಮತಿ ಸಂಗನಬಸಮ್ಮ ಮತ್ತು ಶ್ರೀ ರವಜಪ್ಪ ಮದಾರಿ ಅವರ ಗೌರವಾರ್ಥ ನಿರ್ಮಿಸಲಾಗಿದೆ.',
+    'about-lbl':'ನಮ್ಮ ಕಥೆ','about-title':'ಹಾಲ್ ಬಗ್ಗೆ',
+    'fac-lbl':'ನಾವು ನೀಡುವ ಸೌಲಭ್ಯ','fac-title':'ಸೌಲಭ್ಯಗಳು',
+    'gal-lbl':'ಫೋಟೋ ಪ್ರವಾಸ','gal-title':'ಫೋಟೋ ಗ್ಯಾಲರಿ','gal-note':'📸 ನಿಮ್ಮ ನಿಜವಾದ ಹಾಲ್ ಫೋಟೋಗಳನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ',
+    'ev-lbl':'ನಾವು ಆಚರಿಸುವ ಕಾರ್ಯಕ್ರಮಗಳು','ev-title':'ಪ್ರತಿ ಶುಭ ಸಂದರ್ಭ',
+    'ev1':'ವಿವಾಹ (ಮದುವೆ)','ev2':'ನಿಶ್ಚಿತಾರ್ಥ','ev3':'ಹುಟ್ಟುಹಬ್ಬ','ev4':'ನಾಮಕರಣ','ev5':'ಉಪನಯನ','ev6':'ಸ್ವಾಗತ ಸಮಾರಂಭ','ev7':'ವಾರ್ಷಿಕೋತ್ಸವ','ev8':'ಇತರ ಕಾರ್ಯಕ್ರಮಗಳು',
+    'rev-title':'ಪ್ರತಿಕ್ರಿಯೆ ಮತ್ತು ರೇಟಿಂಗ್','rev-src':'94 ರೇಟಿಂಗ್ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ · JustDial',
+    'contact-title':'ಸಂಪರ್ಕ ಮತ್ತು ಸ್ಥಳ',
+    'cta-title':'ಆಚರಣೆಗೆ ಸಿದ್ಧರಿದ್ದೀರಾ? 🌸','cta-sub':'ಇಂದೇ ದಿನಾಂಕ ಬುಕ್ ಮಾಡಿ ಅಥವಾ SubhaAI ಜೊತೆ ಮಾತನಾಡಿ',
+    'f1':'ಭವ್ಯ ಊಟದ ಹಾಲ್','f2':'14 ಅತಿಥಿ ಕೊಠಡಿಗಳು','f3':'ತೋಟ ಮತ್ತು ಹಳದಿ ಪ್ರದೇಶ','f4':'ಜನರೇಟರ್ ಬ್ಯಾಕಪ್','f5':'ಪಾರ್ಕಿಂಗ್ ಸೌಲಭ್ಯ','f6':'ವಧು ಕೊಠಡಿ','f7':'ಅಲಂಕಾರ ಸೇವೆ','f8':'ಧಾರ್ಮಿಕ ಅನುಷ್ಠಾನ ಸಹಾಯ','f9':'24/7 ಬಿಸಿ ನೀರು','f10':'ಕ್ಯಾಟರಿಂಗ್ ಸೇವೆ',
+    'about-p1':'<strong style="color:var(--rose)">ಶ್ರೀ ಮಠೋಶ್ರೀ ಸಂಗನಬಸಮ್ಮ ರವಜಪ್ಪ ಮದಾರಿ ಕಲ್ಯಾಣ ಮಂಟಪ</strong> — ಶ್ರದ್ಧೇಯ <strong>ಶ್ರೀಮತಿ ಸಂಗನಬಸಮ್ಮ</strong> ಮತ್ತು <strong>ಶ್ರೀ ರವಜಪ್ಪ ಮದಾರಿ</strong> ಅವರ ಪವಿತ್ರ ಸ್ಮರಣಾರ್ಥ ನಿರ್ಮಿಸಲಾಗಿದೆ.',
+    'about-p2':'ಮುದ್ದೇಬಿಹಾಳ, ವಿಜಯಪುರ ಜಿಲ್ಲೆಯ ಹೃದಯಭಾಗದಲ್ಲಿ ಇರುವ ಈ ಭವ್ಯ ಮಂಟಪ ತಲೆಮಾರುಗಳಿಂದ ಅಸಂಖ್ಯ ಕುಟುಂಬಗಳ ಶುಭ ಸಮಾರಂಭಗಳಿಗೆ ಸಾಕ್ಷಿಯಾಗಿದೆ.',
+    'about-p3':'ಇಂದು <strong>ಪರಶುರಾಮ ಮದಾರಿ</strong> ಮತ್ತು <strong>ಮುತ್ತಣ್ಣ ಮದಾರಿ</strong> ಅವರಿಂದ ಹೆಮ್ಮೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ. JustDial ನಲ್ಲಿ <strong>4.3★</strong> ರೇಟಿಂಗ್, 94 ಪ್ರತಿಕ್ರಿಯೆಗಳು.',
+  }
+};
+let curLang=localStorage.getItem('srkm-lang')||'en';
+function setLang(l){
+  curLang=l;localStorage.setItem('srkm-lang',l);
+  ['en','hi','kn'].forEach(x=>document.getElementById('lb-'+x)?.classList.toggle('on',x===l));
+  const t=LANGS[l]||LANGS.en;
+  Object.keys(t).forEach(k=>{const el=document.getElementById('t-'+k);if(el)el.innerHTML=t[k];});
+  // update nav brand short
+  const sh=document.getElementById('nb-short');
+  if(sh)sh.textContent=l==='kn'?'ಮದಾರಿ ಕಲ್ಯಾಣ ಮಂಟಪ':l==='hi'?'मदारी कल्याण मंटप':'Madari Kalyana Mantapa';
+}
+setLang(curLang);
+
+// ── BOOKING PANEL ──
+function openBooking(){document.getElementById('booking-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeBooking(){document.getElementById('booking-overlay').classList.remove('open');document.body.style.overflow='';}
+function handleOverlayClick(e){if(e.target===document.getElementById('booking-overlay'))closeBooking();}
+function openBookingEvent(ev){
+  openBooking();bpTab('cal');
+  document.querySelectorAll('.evb').forEach(b=>b.classList.remove('sel'));
+  const b=document.querySelector(`.evb[data-ev="${ev}"]`);
+  if(b){b.classList.add('sel');uEvent=ev;}
+  checkReady();
+}
+
+function bpTab(t){
+  ['cal','chat'].forEach(x=>{
+    document.getElementById('bptab-'+x).classList.toggle('on',x===t);
+    document.getElementById('bpanel-'+x).classList.toggle('on',x===t);
+  });
+  if(t==='chat'&&!chatInited){initChat();chatInited=true;}
+}
+
+// ── FORM ──
+function pickEv(btn){
+  document.querySelectorAll('.evb').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');uEvent=btn.dataset.ev;checkReady();
+}
+function checkReady(){
+  uName=document.getElementById('uname').value.trim();
+  document.getElementById('show-cal-btn').disabled=!(uName.length>=2&&uEvent);
+}
+function showCalendar(){
+  document.getElementById('cal-wrap').style.display='block';
+  renderCal();
+}
+
+// ── CALENDAR ──
+const MO_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MO_KN=['ಜನವರಿ','ಫೆಬ್ರುವರಿ','ಮಾರ್ಚ್','ಏಪ್ರಿಲ್','ಮೇ','ಜೂನ್','ಜುಲೈ','ಆಗಸ್ಟ್','ಸೆಪ್ಟೆಂಬರ್','ಅಕ್ಟೋಬರ್','ನವೆಂಬರ್','ಡಿಸೆಂಬರ್'];
+const MO_HI=['जनवरी','फरवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'];
+const DY_EN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DY_KN=['ಭಾ','ಸೋ','ಮಂ','ಬು','ಗು','ಶು','ಶ'];
+const DY_HI=['रवि','सोम','मंगल','बुध','गुरु','शुक्र','शनि'];
+
+function calNav(d){calDt=new Date(calDt.getFullYear(),calDt.getMonth()+d,1);renderCal();}
+
+function renderCal(){
+  const yr=calDt.getFullYear(),mo=calDt.getMonth();
+  const mos=curLang==='kn'?MO_KN:curLang==='hi'?MO_HI:MO_EN;
+  const dys=curLang==='kn'?DY_KN:curLang==='hi'?DY_HI:DY_EN;
+  document.getElementById('cal-month-lbl').textContent=`${mos[mo]} ${yr}`;
+  // headers
+  const dh=document.getElementById('cal-dh');
+  dh.innerHTML=dys.map(d=>`<div>${d}</div>`).join('');
+  // cells
+  const grid=document.getElementById('cal-cells');grid.innerHTML='';
+  const first=new Date(yr,mo,1).getDay(),days=new Date(yr,mo+1,0).getDate();
+  const today=new Date();
+  for(let i=0;i<first;i++){const e=document.createElement('div');e.className='cd empty';grid.appendChild(e);}
+  for(let d=1;d<=days;d++){
+    const ds=`${yr}-${String(mo+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const cDate=new Date(yr,mo,d);
+    const isPast=cDate<new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    const isToday=cDate.toDateString()===today.toDateString();
+    const isBooked=!!bookedDates[ds];
+    const isAuspi=!!AUSPI[ds];
+    const isSel=selDate===ds;
+    const cell=document.createElement('div');
+    cell.textContent=d;
+    let cls='cd';
+    if(isPast)cls+=' past';
+    else if(isBooked){cls+=' booked';const lbl=document.createElement('div');lbl.className='cd-label';lbl.textContent='BOOKED';cell.appendChild(lbl);}
+    else cls+=' avail';
+    if(isToday)cls+=' today';
+    if(isSel)cls+=' sel';
+    if(isAuspi&&!isPast&&!isBooked)cls+=' auspi';
+    cell.className=cls;
+    if(!isPast&&!isBooked)cell.addEventListener('click',()=>selectDate(ds,d,mo,yr));
+    grid.appendChild(cell);
+  }
+}
+
+function selectDate(ds,d,mo,yr){
+  selDate=ds;renderCal();
+  const mos=MO_EN;
+  const isAuspi=AUSPI[ds];
+  const container=document.getElementById('dd-container');
+  container.innerHTML=`<div class="dd-box">
+    <div class="dd-date">📅 ${d} ${mos[mo]} ${yr}</div>
+    <div class="dd-ok">✅ Available for booking</div>
+    ${isAuspi?`<div class="dd-auspi">⭐ <strong>Auspicious Date!</strong> This day falls on <strong>${isAuspi}</strong> — highly auspicious for sacred celebrations. Dates like this book up very fast!</div>`:''}
+    <button class="dd-btn" onclick="openModal()">🌸 Book ${d} ${mos[mo]} ${yr} →</button>
+  </div>`;
+}
+
+// ── MODAL ──
+function openModal(){
+  if(!selDate)return;
+  document.getElementById('modal-sub').textContent=`📅 ${selDate}  ·  Guest: ${uName}`;
+  document.getElementById('m-ev').value=uEvent||'wedding';
+  selSlot=null;document.querySelectorAll('.slb').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('m-guests').value='';document.getElementById('m-phone').value='';
+  document.getElementById('mok-btn').disabled=true;
+  document.getElementById('modal-ov').classList.add('open');
+}
+function closeModal(){document.getElementById('modal-ov').classList.remove('open');}
+function pickSlot(btn){document.querySelectorAll('.slb').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');selSlot=btn.dataset.s;chkMod();}
+function chkMod(){const g=document.getElementById('m-guests').value,ph=document.getElementById('m-phone').value;document.getElementById('mok-btn').disabled=!(selSlot&&g&&ph);}
+
+async function confirmBk(){
+  const evType=document.getElementById('m-ev').value;
+  const guests=document.getElementById('m-guests').value;
+  const phone=document.getElementById('m-phone').value;
+  const bid='SRKM-'+new Date().getFullYear()+'-'+String(Math.floor(Math.random()*9000)+1000);
+  // Supabase save (if keys set)
+  if(window.SUPABASE_URL&&window.SUPABASE_URL!=='YOUR_SUPABASE_URL'){
+    try{
+      const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm');
+      const sb=createClient(window.SUPABASE_URL,window.SUPABASE_ANON_KEY);
+      await sb.from('bookings').insert({booking_id:bid,user_name:uName,date:selDate,event_type:evType,guests:parseInt(guests),slot:selSlot,phone,status:'confirmed'});
+    }catch(e){console.log('Supabase save failed:',e);}
+  }
+  bookedDates[selDate]={event:evType};
+  myBkList.push({date:selDate,event:evType,guests,slot:selSlot,bid});
+  renderMyBk();renderCal();closeModal();
+  document.getElementById('succ-em').textContent=EVI[evType]||'🎉';
+  document.getElementById('succ-id').textContent=bid;
+  document.getElementById('succ-ov').classList.add('open');
+  confetti();selDate=null;document.getElementById('dd-container').innerHTML='';
+}
+function closeSucc(){document.getElementById('succ-ov').classList.remove('open');}
+
+function renderMyBk(){
+  const list=document.getElementById('my-bk-list');
+  if(!myBkList.length){list.innerHTML='<div class="no-bk">No bookings yet. 🌸</div>';return;}
+  list.innerHTML=myBkList.map(b=>`<div class="bk-card"><div class="bk-icon">${EVI[b.event]||'✨'}</div><div><div class="bk-ev">${b.event.charAt(0).toUpperCase()+b.event.slice(1)}</div><div class="bk-dt">📅 ${b.date} · ${b.slot}</div><div class="bk-dt">👥 ${b.guests} guests</div><div class="bk-id">${b.bid}</div></div></div>`).join('');
+}
+
+// ── SUBHAAI ──
+function initChat(){
+  const evN=(uEvent||'wedding').charAt(0).toUpperCase()+(uEvent||'wedding').slice(1);
+  const name=uName?uName.split(' ')[0]:'there';
+  addMsg('ai',`Namaste ${name}! 🙏\n\nI'm **SubhaAI**, your booking assistant for **Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa**, Muddebihal.\n\nYou're planning a **${evN}** — how wonderful! I can help you:\n\n📅 Check date availability\n⭐ Find auspicious muhurtas\n🏛️ Learn about facilities\n💰 Pricing enquiries\n\nHow can I help you today?`);
+}
+function qSend(t){document.getElementById('chat-ta').value=t;sendChat();}
+function addMsg(role,text){
+  const msgs=document.getElementById('chat-msgs');
+  const div=document.createElement('div');div.className='cmsg '+role;
+  const time=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+  const fmt=text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>');
+  div.innerHTML=`<div class="cbub">${fmt}</div><div class="ctm">${time}</div>`;
+  msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
+  chatHist.push({role:role==='ai'?'assistant':'user',content:text});
+}
+function showTyp(){const m=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='cmsg ai';d.id='typ-ind';d.innerHTML='<div class="typing"><div class="td"></div><div class="td"></div><div class="td"></div></div>';m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function hideTyp(){const e=document.getElementById('typ-ind');if(e)e.remove();}
+
+async function sendChat(){
+  const inp=document.getElementById('chat-ta');
+  const text=inp.value.trim();if(!text)return;
+  addMsg('user',text);inp.value='';inp.style.height='42px';
+  document.getElementById('send-btn').disabled=true;showTyp();
+  const bookedList=Object.keys(bookedDates).join(', ')||'none';
+  const auspiList=Object.entries(AUSPI).slice(0,15).map(([d,n])=>`${d} (${n})`).join(', ');
+  const sys=`You are SubhaAI, the warm and helpful AI assistant for Shri Mathoshree Sanganabassamma Ravajappa Madari Kalyana Mantapa in Muddebihal, Vijayapura District, Karnataka. Managed by Parashuram Madari (+91 89041 41987) and Muttanna Madari (+91 94483 42067).
+HALL: Seating 2,000 · Dining 1,500 at once, 14 round tables, VIP private dining room, all utensils provided · 14 guest rooms (bridal suite + groom room have attached bathrooms, rest have common bathrooms separate for men/women) · Garden & Haldi area · Generator backup (MANDATORY separate charge) · Large parking within 2-acre property · Bridal suite · Decoration service · Dharmic rituals support (priest arrangements, homa) · 24/7 solar hot water · NOT air conditioned — well ventilated · In-house catering
+BOOKING: 24hr slot — check-in 4 PM Day 1, check-out 4 PM Day 2 · Pricing on request only · Advance booking strongly recommended for auspicious dates
+CURRENT USER: ${uName||'Guest'}, planning: ${uEvent||'event'}
+BOOKED DATES (say only "not available", never reveal who booked): ${bookedList}
+AUSPICIOUS DATES: ${auspiList}
+RULES: Never reveal bookings details · Reply in same language as user (English/Kannada/Hindi) · Keep responses 2-4 sentences, warm · Use emojis naturally · For pricing say contact WhatsApp`;
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-allow-browser':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,system:sys,messages:chatHist.filter(m=>m.role==='user'||m.role==='assistant').slice(-10)})});
+    const data=await r.json();
+    hideTyp();addMsg('ai',data.content?.[0]?.text||fallback(text));
+  }catch(e){hideTyp();addMsg('ai',fallback(text));}
+  document.getElementById('send-btn').disabled=false;
+}
+function fallback(t){
+  const l=t.toLowerCase();
+  if(l.includes('avail')||l.includes('date')||l.includes('ಲಭ್ಯ')||l.includes('तारीख'))return'Please check our **Calendar tab** 📅 — click any green date to see if it\'s available and book it. Auspicious dates are marked with ★!';
+  if(l.includes('auspi')||l.includes('shubh')||l.includes('ಶುಭ')||l.includes('muhurt')||l.includes('nakshatra'))return'⭐ Upcoming auspicious dates: **April 14 (Ugadi)**, **April 18 (Rohini Nakshatra)**, **May 7 (Swati Nakshatra)**, **May 20 (Rohini)**. They\'re marked ★ on the calendar. Book very early as these fill up fast! 🙏';
+  if(l.includes('price')||l.includes('cost')||l.includes('charge')||l.includes('ದರ')||l.includes('मूल्य'))return'Pricing is shared on request 🙏\n\n💬 **Parashuram Madari**: +91 89041 41987\n💬 **Muttanna Madari**: +91 94483 42067\n\nThey will give you a full quote!';
+  if(l.includes('capac')||l.includes('how many')||l.includes('seat'))return'Our hall seats **2,000 guests** 🏛️ The dining hall serves **1,500 guests simultaneously** with 14 round tables, buffet counters, and a VIP private dining room. All utensils provided!';
+  if(l.includes('room')||l.includes('stay')||l.includes('sleep'))return'We have **14 guest rooms** 🏠 Bridal suite & groom\'s room have attached private bathrooms. Other rooms have common bathrooms (separate for men and women). All rooms have **24/7 solar hot water**!';
+  if(l.includes('time')||l.includes('slot')||l.includes('check')||l.includes('ಸಮಯ'))return'⏰ Your 24-hour slot: check-in at **4:00 PM Day 1**, check-out by **4:00 PM Day 2**. Example: event on 20th → arrive 19th at 4 PM, leave 20th by 4 PM.';
+  if(l.includes('dining')||l.includes('food')||l.includes('eat')||l.includes('cater'))return'🍽️ Our dining hall seats **1,500 guests at once** with 14 round tables, full buffet, and an exclusive **VIP dining room**. In-house catering, all utensils provided!';
+  if(l.includes('facilit')||l.includes('ಸೌಲಭ್ಯ')||l.includes('सुविधा'))return'✨ Our facilities: catering & kitchen, garden for Haldi ceremonies, generator backup (mandatory separate charge), ample parking, bridal suite, decoration service, dharmic rituals support (priest arrangements), 24/7 solar hot water! 🙏';
+  if(l.includes('generator')||l.includes('power'))return'⚡ Full generator backup available! Note: generator charges are **mandatory and billed separately** from hall fees — even if not used.';
+  return'Namaste! 🙏 I\'m SubhaAI, here to help you plan your perfect celebration at Shri Mathoshree Kalyana Mantapa, Muddebihal. Ask me about dates, auspicious muhurtas, facilities, timings, or pricing!';
+}
+document.getElementById('chat-ta').addEventListener('input',function(){this.style.height='42px';this.style.height=Math.min(this.scrollHeight,96)+'px';});
+document.getElementById('chat-ta').addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendChat();}});
+
+// ── CONFETTI ──
+function confetti(){
+  const cols=['#C8445A','#E8A820','#5B7B4A','#E05070','#FF8C00','#D4960A'];
+  for(let i=0;i<50;i++){
+    const el=document.createElement('div');el.className='cf';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?'50%':'2px'};animation-duration:${1.2+Math.random()*2}s;animation-delay:${Math.random()*.5}s`;
+    document.body.appendChild(el);setTimeout(()=>el.remove(),4000);
+  }
+}
+
+// Supabase config (set these after Supabase setup)
+window.SUPABASE_URL='https://bbtfkdfqpscfgljdfkxc.supabase.co';
+window.SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJidGZrZGZxcHNjZmdsamRma3hjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3ODM3NDgsImV4cCI6MjA4OTM1OTc0OH0.yG4tDllpPIkqHmdRyc6ehWQVV2-Aq_u5MgOSj6i5qUg';
+</script>
+</body>
+</html>
